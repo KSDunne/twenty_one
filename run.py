@@ -25,13 +25,13 @@ print(data)
 
 
 def shuffle_cards():
-    # we will use a set of 4 Unicode symbols for suits; spades, hearts, diamonds and clubs
+    # Here we use a set of 4 Unicode symbols for suits; spades, hearts, diamonds and clubs
 
     suits = ["\u2660", "\u2661", "\u2662", "\u2663"]
     ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
     deck = []
 
-    # create deck of 52 cards using 2 nested for loops
+    # Create a deck of 52 cards using 2 nested for loops
 
     for suit in suits:
         for rank in ranks:
@@ -44,3 +44,11 @@ def shuffle_cards():
 
 my_deck = shuffle_cards()
 print(my_deck)
+
+
+def deal_cards(deck, player):
+    # Deal card to the player and remove that card from the deck. The list will change from length of 52 to 51
+
+    card = deck.pop()
+    player.append(card)
+    return card
