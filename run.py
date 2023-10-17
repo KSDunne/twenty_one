@@ -85,3 +85,64 @@ def total(hand):
         num_aces -= 1
 
     return result
+
+
+def compare_hands(house, player):
+    # Determines winner
+
+    house_total, player_total = total(house), total(player)
+
+    if house_total > player_total:
+        print("You lose.")
+    elif house_total < player_total:
+        print("You win.")
+    elif house_total == 21 and 2 == len(house) < len(player):
+        print("You lose")
+    elif player_total == 21 and 2 == len(player) < len(house):
+        print("You win.")
+    else:
+        print("A Tie!")
+
+
+def twenty_one():
+    # Simulates a game of blackjack
+
+    deck = shuffle_cards()
+    house = []
+    player = []
+
+    for i in range(2):
+        deal_cards(deck, player)
+        deal_cards(deck, house)
+
+    # Print hands
+
+    print("House: {:>7}{:>7}".format(house[0], house[1]))
+    print("Y o u: {:>7}{:>7}".format(player[0], player[1]))
+
+    # Give cards to user as requested
+
+    answer = input("hit or stand? (ENTER means hit):")
+    while answer in {"", "h", "hit"}:
+        card = deal_cards(deck, player)
+        print("You got {:<7}".format(card))
+
+        if total(player) > 21:  # you bust
+            print("You bust, sorry")
+            return
+
+        answer = input("hit or stand? (ENTER means hit) :")
+
+        # House must play
+
+        while total(house) < 17:  # House must hit until > 16
+            card = deal_cards(deck, house)
+            print("House got {:>7}".format(card))
+
+            if total(house) > 21:  # House bust
+                print("House bust, you win.")
+                return
+
+            # Both hands are not done, see who wins
+            compare_hands(house, player)
+            return
