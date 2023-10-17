@@ -43,7 +43,7 @@ def shuffle_cards():
 
 
 my_deck = shuffle_cards()
-# print(my_deck)
+print(my_deck)
 
 
 def deal_cards(deck, player):
