@@ -41,5 +41,5 @@ def shuffle_cards():
 
     return deck
 
-myDeck = shuffle_cards()
-print(myDeck)
+my_deck = shuffle_cards()
+print(my_deck)
