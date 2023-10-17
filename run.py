@@ -122,7 +122,7 @@ def twenty_one():
 
     # Give cards to user as requested
 
-    answer = input("hit or stand? (ENTER means hit):")
+    answer = input("hit or stand? (ENTER means hit):\n")
     while answer in {"", "h", "hit"}:
         card = deal_cards(deck, player)
         print("You got {:<7}".format(card))
@@ -131,7 +131,7 @@ def twenty_one():
             print("You bust, sorry")
             return
 
-        answer = input("hit or stand? (ENTER means hit) :")
+        answer = input("hit or stand? (ENTER means hit) :\n")
 
         # House must play
 
