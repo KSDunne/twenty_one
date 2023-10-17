@@ -21,7 +21,7 @@ game_data = SHEET.worksheet("game_data")
 
 data = game_data.get_all_values()
 
-# print(data)
+print(data)
 
 
 def shuffle_cards():
