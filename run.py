@@ -21,7 +21,7 @@ game_data = SHEET.worksheet("game_data")
 
 data = game_data.get_all_values()
 
-print(data)
+# print(data)
 
 
 def shuffle_cards():
@@ -43,7 +43,7 @@ def shuffle_cards():
 
 
 my_deck = shuffle_cards()
-print(my_deck)
+# print(my_deck)
 
 
 def deal_cards(deck, player):
@@ -143,6 +143,6 @@ def twenty_one():
                 print("House bust, you win.")
                 return
 
-            # Both hands are not done, see who wins
+            # Both hands are now done, see who wins
             compare_hands(house, player)
             return
