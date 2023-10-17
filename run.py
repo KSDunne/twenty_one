@@ -146,3 +146,6 @@ def twenty_one():
             # Both hands are now done, see who wins
             compare_hands(house, player)
             return
+
+
+twenty_one()
