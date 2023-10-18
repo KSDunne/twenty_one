@@ -33,8 +33,8 @@ After account setup, the steps were as follows:
 - Use python and nodejs buildpacks
 - The buildpack order should be python on top and nodejs underneath
 - Go to the deploy tab
-- Select the deployment method. Github was used for this project
-- Search for the github repository name. It was twenty_one for this project
+- Select the deployment method (github was used for this project)
+- Search for the github repository name (it was twenty_one for this project)
 - Click connect
 - There is an option to use manual deployment or automatic deployment. Make sure main branch is selected
 - After the first deployment you will see a message saying "your app was successfully deployed" and there will be a "view" button to take you to your deployed application
@@ -50,7 +50,7 @@ The live link for this project can be found here - [Twenty One](https://twenty-o
 
 - Go to the GitHub repository
 - Click the Code button near the top of the page
-- Select 'HTTPS', 'SSH', or 'Github CLI' depending on how you would like to clone.
+- Select 'HTTPS', 'SSH', or 'Github CLI', depending on how you would like to clone
 - Click the copy button to copy the URL to your clipboard
 - Open Git Bash
 - Change the current working directory to where you want the cloned directory
