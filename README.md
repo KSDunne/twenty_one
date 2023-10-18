@@ -14,6 +14,43 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 
 ## Table of contents
 
+## User experience (UX)
+
+### Key project goals
+
+- Create an interactive card game in a terminal using Python
+- The functionality of this game should keep the core concept of black jack. That is, playing a card game using shuffled cards, against a dealer and winning without busting over a score of 21
+- Allow the user to seemlessly restart a game without having to manually press the run program button at the top of the page and without having to refresh the page
+
+### Target audience
+
+- Users that would like to entertain themselves by playing a fun card game online
+- Users that like to play terminal based games
+
+### User requirements and expectations
+
+- An intuitive game interface
+- An ability to read the rules of the game
+- An ability to personalise the game by adding a name
+- The ability to restart the game seemlessly in the terminal
+
+## User stories
+
+As a site visitor,
+
+- I want to play a game
+- I want to see a start page where next steps are intuitive
+- I want to be able to find the rules of the game easily
+- I want to be able to enter a username to make the game feel personal to me
+- If I enter data that doesn't make sense to a particular step in the game I want to be informed
+- I want to be able to restart the game easily once I have finished playing the first time
+
+## Design
+
+### Flowcharts
+
+## Data Models
+
 ## Deployment
 
 All code for this project was written in visual studio integrated development environment. Github was used for version control and the application was deployed to heroku from github.
