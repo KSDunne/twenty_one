@@ -45,3 +45,16 @@ The live link for this project can be found here - [Twenty One](https://twenty-o
 
 - Go to the GitHub repository
 - Click on the Fork button in the upper right-hand corner
+
+### This repository can be cloned using the following steps:
+
+- Go to the GitHub repository
+- Click the Code button near the top of the page
+- Select 'HTTPS', 'SSH', or 'Github CLI' depending on how you would like to clone.
+- Click the copy button to copy the URL to your clipboard
+- Open Git Bash
+- Change the current working directory to where you want the cloned directory
+- Type git clone and paste the URL ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+- Press enter to create your clone locally
+
+Note, the difference between clone and fork is: you need permissions to push back to the original from a clone, but not a fork because a fork will be completely your own new project.
