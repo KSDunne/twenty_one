@@ -76,6 +76,21 @@ Interaction with an API for example, google sheets.
 
 ## Data models
 
+## Technology
+
+### Language
+
+- Python
+
+### Frameworks & Tools
+
+- [Lucid Chart](https://www.lucidchart.com/pages/)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [Visual Studio Code IDE](https://code.visualstudio.com/)
+- [Prettier Code Formatter](https://prettier.io/)
+- [Venngage's Accessible color palette generator](https://venngage.com/tools/accessible-color-palette-generator)
+
 ## Deployment
 
 All code for this project was written in visual studio integrated development environment. Github was used for version control and the application was deployed to heroku from github.
