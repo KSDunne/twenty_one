@@ -163,7 +163,7 @@ def twenty_one():
 
 def main():
     """
-    Main function which calls
+    Main function that calls
     all functions in order
     """
     greeting_screen
