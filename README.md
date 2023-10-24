@@ -39,11 +39,34 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 As a site visitor,
 
 - I want to play a game
-- I want to see a start page where next steps are intuitive
+- I want to see the game title when I arrive on the start screen
+- I want to see a start screen where next steps are intuitive
 - I want to be able to find the rules of the game easily
 - I want to be able to enter a username to make the game feel personal to me
 - If I enter data that doesn't make sense to a particular step in the game I want to be informed
 - I want to be able to restart the game easily once I have finished playing the first time
+
+## Features
+
+### Start screen
+
+### Rules
+
+### Win screen
+
+### Goodbye screen
+
+## Future features
+
+### Betting System
+
+### Split hand
+
+An option to split your hands if you are dealt two of the same cards, this would make the logic of the game more complex
+
+### Data analysis
+
+Interaction with an API for example, google sheets.
 
 ## Design
 
@@ -51,7 +74,7 @@ As a site visitor,
 
 ![Core Game Flowchart](docs/design/core_game_flowchart.png)
 
-## Data Models
+## Data models
 
 ## Deployment
 
