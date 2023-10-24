@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import random
+import pyfiglet
 
 # Credit: Scope code taken from code institute love sandwiches project
 # These settings are needed to access twenty_one game data
@@ -22,6 +23,18 @@ game_data = SHEET.worksheet("game_data")
 data = game_data.get_all_values()
 
 # print(data)
+
+
+# Credit: https://github.com/kpsdev1/blackjack/blob/main/run.py
+def greeting_screen():
+    """
+    This is a function for the start
+    screen greeting
+    """
+    welcome_sign = pyfiglet.figlet_format(
+        "WELCOME TO THE BLACKJACK TABLE", font="slant"
+    )
+    rprint(f"[blue]{welcome_sign}[/blue]")
 
 
 def shuffle_cards():
@@ -148,4 +161,13 @@ def twenty_one():
             return
 
 
-twenty_one()
+def main():
+    """
+    Main function which calls
+    all functions in order
+    """
+    greeting_screen
+    twenty_one()
+
+
+main()
