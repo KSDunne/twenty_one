@@ -49,6 +49,8 @@ As a site visitor,
 
 ### Flowcharts
 
+![Core Game Flowchart](docs/design/core_game_flowchart.png)
+
 ## Data Models
 
 ## Deployment
