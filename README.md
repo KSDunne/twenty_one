@@ -54,6 +54,8 @@ As a site visitor,
 
 ### Win screen
 
+### Lose screen
+
 ### Goodbye screen
 
 ## Future features
