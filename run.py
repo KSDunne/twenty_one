@@ -19,7 +19,8 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("twenty_one")
 
-DEFAULT_MESSAGE = "(R)ules, (H)it or (S)tand? (ENTER means hit):\n"
+WELCOME_MESSAGE = "WELCOME TO BLACKJACK"
+DEFAULT_MESSAGE = "(H)it or (S)tand? (ENTER means hit):\n"
 WIN_MESSAGE = "You win."
 LOSE_MESSAGE = "You lose."
 TIE_MESSAGE = "A Tie!"
@@ -27,6 +28,7 @@ PLAYER_BUST_MESSAGE = "You bust, sorry"
 HOUSE_BUST_MESSAGE = "House bust, you win."
 REPLAY_MESSAGE = "Play another game? (Y)es or (N)o\n"
 GOODBYE_MESSAGE = "Goodbye"
+MAIN_MENU_MESSAGE = "(R)ules\n(N)ew game\n(Q)uit\n\nUser input: "
 
 game_data = SHEET.worksheet("game_data")
 
@@ -177,12 +179,20 @@ def twenty_one():
     return
 
 
-def start_or_quit():
-    twenty_one()
-    answer = input(REPLAY_MESSAGE)
-    while answer in {"", "y", "Y"}:
-        twenty_one()
-        answer = input(REPLAY_MESSAGE)
+def main_menu():
+    answer = input(MAIN_MENU_MESSAGE)
+    while answer not in {"q", "Q"}:
+        if answer in {"r", "R"}:
+            rules()
+        elif answer in {"n", "N"}:
+            twenty_one()
+            replay = input(REPLAY_MESSAGE)
+            while replay in {"y", "Y"}:
+                twenty_one()
+                replay = input(REPLAY_MESSAGE)
+        else:
+            print("Not a valid input\n")
+        answer = input(MAIN_MENU_MESSAGE)
     notification(GOODBYE_MESSAGE)
 
 
@@ -193,8 +203,8 @@ def main():
     Setting the terminal text color to green before calling other methods.
     """
     sys.stdout.write("\033[0;32m")
-    notification("WELCOME TO BLACKJACK")
-    start_or_quit()
+    notification(WELCOME_MESSAGE)
+    main_menu()
 
 
 main()

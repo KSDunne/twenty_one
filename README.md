@@ -50,6 +50,8 @@ As a site visitor,
 
 ### Start screen
 
+### Main menu options
+
 ### Rules
 
 ### Win screen
