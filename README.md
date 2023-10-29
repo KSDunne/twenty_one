@@ -80,6 +80,8 @@ Interaction with an API for example, google sheets.
 
 ## Design
 
+### Centered mock terminal
+
 ### Flowcharts
 
 ![Core Game Flowchart](docs/design/core_game_flowchart.png)
