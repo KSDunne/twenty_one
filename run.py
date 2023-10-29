@@ -27,15 +27,11 @@ data = game_data.get_all_values()
 
 
 # Credit: https://github.com/kpsdev1/blackjack/blob/main/run.py
-# Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python
-def greeting_screen():
+def notification(text):
     """
-    This is a function for the start
-    screen greeting
+    This is a function for the gameplay user feedback.
     """
-    sys.stdout.write("\033[0;32m")
-    welcome_sign = pyfiglet.figlet_format("WELCOME TO BLACKJACK", font="big")
-    print(welcome_sign)
+    print(pyfiglet.figlet_format(text, font="big"))
 
 
 def shuffle_cards():
@@ -107,15 +103,15 @@ def compare_hands(house, player):
     house_total, player_total = total(house), total(player)
 
     if house_total > player_total:
-        print("You lose.")
+        notification("You lose.")
     elif house_total < player_total:
-        print("You win.")
+        notification("You win.")
     elif house_total == 21 and 2 == len(house) < len(player):
-        print("You lose")
+        notification("You lose.")
     elif player_total == 21 and 2 == len(player) < len(house):
-        print("You win.")
+        notification("You win.")
     else:
-        print("A Tie!")
+        notification("A Tie!")
 
 
 def twenty_one():
@@ -132,42 +128,42 @@ def twenty_one():
     # Print hands
 
     print("House: {:>7}{:>7}".format(house[0], house[1]))
-    print("Y o u: {:>7}{:>7}".format(player[0], player[1]))
+    print("You: {:>7}{:>7}".format(player[0], player[1]))
 
     # Give cards to user as requested
 
     answer = input("hit or stand? (ENTER means hit):\n")
-    while answer in {"", "h", "hit"}:
-        card = deal_cards(deck, player)
-        print("You got {:<7}".format(card))
-
-        if total(player) > 21:  # you bust
-            print("You bust, sorry")
-            return
-
-        answer = input("hit or stand? (ENTER means hit) :\n")
-
+    # 's' or 'S' skips player turn and goes to house play
+    if answer not in {"s", "S"}:
+        while answer in {"", "h", "hit"}:
+            card = deal_cards(deck, player)
+            print("You got {:<7}".format(card))
+            if total(player) > 21:  # you bust
+                notification("You bust, sorry")
+                return
+            answer = input("hit or stand? (ENTER means hit) :\n")
+    else:
         # House must play
-
         while total(house) < 17:  # House must hit until > 16
             card = deal_cards(deck, house)
             print("House got {:>7}".format(card))
-
             if total(house) > 21:  # House bust
-                print("House bust, you win.")
+                notification("House bust, you win.")
                 return
 
-            # Both hands are now done, see who wins
-            compare_hands(house, player)
-            return
+    # Both hands are now done, see who wins
+    compare_hands(house, player)
+    return
 
 
+# Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python
 def main():
     """
-    Main function that calls
-    all functions in order
+    Main function that calls all functions in order.
+    Setting the terminal text color to green before calling other methods.
     """
-    greeting_screen()
+    sys.stdout.write("\033[0;32m")
+    notification("WELCOME TO BLACKJACK")
     twenty_one()
 
 

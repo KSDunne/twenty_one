@@ -58,6 +58,10 @@ As a site visitor,
 
 ### Goodbye screen
 
+### Restart game
+
+### User personalisation
+
 ## Future features
 
 ### Betting System
