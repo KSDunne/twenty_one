@@ -4,35 +4,43 @@ import random
 import sys
 from google.oauth2.service_account import Credentials
 
-# Credit: Scope code taken from code institute love sandwiches project
-# These settings are needed to access twenty_one game data
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive",
-]
-
-# Credit: Code altered from code institute love sandwiches project, to get twenty_one spreadsheet
-# These settings are needed to access twenty_one game data
-CREDS = Credentials.from_service_account_file("creds.json")
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open("twenty_one")
-
 WELCOME_MESSAGE = "WELCOME TO BLACKJACK"
-DEFAULT_MESSAGE = "(H)it or (S)tand? (ENTER means hit):\n"
+DEFAULT_MESSAGE = "(H)it or (S)tand? (ENTER means hit):\nUser input: "
 WIN_MESSAGE = "You win, "
 LOSE_MESSAGE = "You lose, "
 TIE_MESSAGE = "A tie between the house and "
 PLAYER_BUST_MESSAGE = "You bust, sorry "
 HOUSE_BUST_MESSAGE = "House bust, you win "
-REPLAY_MESSAGE = "Play another game? (Y)es or (N)o\n"
+REPLAY_MESSAGE = "Play another game? (Y)es or (N)o\nUser input: "
 GOODBYE_MESSAGE = "Goodbye, "
 MAIN_MENU_MESSAGE = "(R)ules\n(N)ew game\n(Q)uit\n\nUser input: "
 
-user_data = SHEET.worksheet("user_data")
+user_data = None
 username = None
 user_cell = None
+
+
+# if google sheets calls fail, game doesn't break
+def google_sheets():
+    # Credit: Scope code taken from code institute love sandwiches project
+    # These settings are needed to access twenty_one game data
+    SCOPE = [
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive.file",
+        "https://www.googleapis.com/auth/drive",
+    ]
+
+    try:
+        # Credit: Code altered from code institute love sandwiches project, to get twenty_one spreadsheet
+        # These settings are needed to access twenty_one game data
+        CREDS = Credentials.from_service_account_file("creds.json")
+        SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+        GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+        SHEET = GSPREAD_CLIENT.open("twenty_one")
+        global user_data
+        user_data = SHEET.worksheet("user_data")
+    except:
+        return
 
 
 # Credit: https://github.com/kpsdev1/blackjack/blob/main/run.py
@@ -114,25 +122,33 @@ def rules():
 
 
 # increment the wins column for the user
+# in case google sheet call fails, game doesn't break
 def increment_wins():
     global user_cell
     global user_data
-    user_data.update_cell(
-        user_cell.row,
-        user_cell.col + 1,
-        int(user_data.cell(user_cell.row, user_cell.col + 1).value) + 1,
-    )
+    try:
+        user_data.update_cell(
+            user_cell.row,
+            user_cell.col + 1,
+            int(user_data.cell(user_cell.row, user_cell.col + 1).value) + 1,
+        )
+    except:
+        return
 
 
 # increment the losses column for the user
+# in case google sheet call fails, game doesn't break
 def increment_losses():
     global user_cell
     global user_data
-    user_data.update_cell(
-        user_cell.row,
-        user_cell.col + 2,
-        int(user_data.cell(user_cell.row, user_cell.col + 2).value) + 1,
-    )
+    try:
+        user_data.update_cell(
+            user_cell.row,
+            user_cell.col + 2,
+            int(user_data.cell(user_cell.row, user_cell.col + 2).value) + 1,
+        )
+    except:
+        return
 
 
 def compare_hands(house, player):
@@ -233,14 +249,18 @@ def personalize():
             )
         else:
             # find username if already exists, otherwise add to list
+            # if google sheet calls fail it won't break game functionality
             global user_cell
             global user_data
-            cell = user_data.find(username)
-            if cell:
-                user_cell = cell
-            else:
-                user_data.append_row([username, 0, 0])
-                user_cell = user_data.find(username)
+            try:
+                cell = user_data.find(username)
+                if cell:
+                    user_cell = cell
+                else:
+                    user_data.append_row([username, 0, 0])
+                    user_cell = user_data.find(username)
+            except:
+                return
             break
 
 
@@ -251,6 +271,7 @@ def main():
     Setting the terminal text color to green before calling other methods.
     """
     sys.stdout.write("\033[0;32m")
+    google_sheets()
     notification(WELCOME_MESSAGE)
     personalize()
     main_menu()
