@@ -74,6 +74,8 @@ An option to split your hands if you are dealt two of the same cards, this would
 
 Interaction with an API for example, google sheets.
 
+### Hide one of dealers cards
+
 ## Design
 
 ### Flowcharts

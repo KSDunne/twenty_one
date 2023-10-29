@@ -19,6 +19,13 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("twenty_one")
 
+DEFAULT_MESSAGE = "(R)ules, (H)it or (S)tand? (ENTER means hit):\n"
+WIN_MESSAGE = "You win."
+LOSE_MESSAGE = "You lose."
+TIE_MESSAGE = "A Tie!"
+PLAYER_BUST_MESSAGE = "You bust, sorry"
+HOUSE_BUST_MESSAGE = "House bust, you win."
+
 game_data = SHEET.worksheet("game_data")
 
 data = game_data.get_all_values()
@@ -97,21 +104,28 @@ def total(hand):
     return result
 
 
+def rules():
+    print("Rules for playing the game:\n")
+    print("Rule1:\n")
+    print("...\n")
+    print("RuleN:\n")
+
+
 def compare_hands(house, player):
     # Determines winner
 
     house_total, player_total = total(house), total(player)
 
     if house_total > player_total:
-        notification("You lose.")
+        notification(LOSE_MESSAGE)
     elif house_total < player_total:
-        notification("You win.")
+        notification(WIN_MESSAGE)
     elif house_total == 21 and 2 == len(house) < len(player):
-        notification("You lose.")
+        notification(LOSE_MESSAGE)
     elif player_total == 21 and 2 == len(player) < len(house):
-        notification("You win.")
+        notification(WIN_MESSAGE)
     else:
-        notification("A Tie!")
+        notification(TIE_MESSAGE)
 
 
 def twenty_one():
@@ -132,23 +146,28 @@ def twenty_one():
 
     # Give cards to user as requested
 
-    answer = input("hit or stand? (ENTER means hit):\n")
+    answer = input(DEFAULT_MESSAGE)
     # 's' or 'S' skips player turn and goes to house play
-    if answer not in {"s", "S"}:
-        while answer in {"", "h", "hit"}:
+    while answer in {"", "h", "hit", "s", "S", "r", "R"}:
+        if answer in {"r", "R"}:
+            rules()
+        elif answer in {"s", "S"}:
+            break
+        else:
             card = deal_cards(deck, player)
             print("You got {:<7}".format(card))
             if total(player) > 21:  # you bust
-                notification("You bust, sorry")
+                notification(PLAYER_BUST_MESSAGE)
                 return
-            answer = input("hit or stand? (ENTER means hit) :\n")
-    else:
-        # House must play
+        answer = input(DEFAULT_MESSAGE)
+
+    # House must play only if house total is less than or equal to player total
+    if total(house) <= total(player):
         while total(house) < 17:  # House must hit until > 16
             card = deal_cards(deck, house)
             print("House got {:>7}".format(card))
             if total(house) > 21:  # House bust
-                notification("House bust, you win.")
+                notification(HOUSE_BUST_MESSAGE)
                 return
 
     # Both hands are now done, see who wins
