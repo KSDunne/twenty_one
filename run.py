@@ -21,13 +21,13 @@ SHEET = GSPREAD_CLIENT.open("twenty_one")
 
 WELCOME_MESSAGE = "WELCOME TO BLACKJACK"
 DEFAULT_MESSAGE = "(H)it or (S)tand? (ENTER means hit):\n"
-WIN_MESSAGE = "You win."
-LOSE_MESSAGE = "You lose."
-TIE_MESSAGE = "A Tie!"
-PLAYER_BUST_MESSAGE = "You bust, sorry"
-HOUSE_BUST_MESSAGE = "House bust, you win."
+WIN_MESSAGE = "You win, "
+LOSE_MESSAGE = "You lose, "
+TIE_MESSAGE = "A tie between the house and "
+PLAYER_BUST_MESSAGE = "You bust, sorry "
+HOUSE_BUST_MESSAGE = "House bust, you win "
 REPLAY_MESSAGE = "Play another game? (Y)es or (N)o\n"
-GOODBYE_MESSAGE = "Goodbye"
+GOODBYE_MESSAGE = "Goodbye, "
 MAIN_MENU_MESSAGE = "(R)ules\n(N)ew game\n(Q)uit\n\nUser input: "
 
 game_data = SHEET.worksheet("game_data")
@@ -35,6 +35,8 @@ game_data = SHEET.worksheet("game_data")
 data = game_data.get_all_values()
 
 # print(data)
+
+username = None
 
 
 # Credit: https://github.com/kpsdev1/blackjack/blob/main/run.py
@@ -121,15 +123,15 @@ def compare_hands(house, player):
     house_total, player_total = total(house), total(player)
 
     if house_total > player_total:
-        notification(LOSE_MESSAGE)
+        notification(LOSE_MESSAGE + username)
     elif house_total < player_total:
-        notification(WIN_MESSAGE)
+        notification(WIN_MESSAGE + username)
     elif house_total == 21 and 2 == len(house) < len(player):
-        notification(LOSE_MESSAGE)
+        notification(LOSE_MESSAGE + username)
     elif player_total == 21 and 2 == len(player) < len(house):
-        notification(WIN_MESSAGE)
+        notification(WIN_MESSAGE + username)
     else:
-        notification(TIE_MESSAGE)
+        notification(TIE_MESSAGE + username)
 
 
 def twenty_one():
@@ -161,7 +163,7 @@ def twenty_one():
             card = deal_cards(deck, player)
             print("You got {:<7}".format(card))
             if total(player) > 21:  # you bust
-                notification(PLAYER_BUST_MESSAGE)
+                notification(PLAYER_BUST_MESSAGE + username)
                 return
         answer = input(DEFAULT_MESSAGE)
 
@@ -171,7 +173,7 @@ def twenty_one():
             card = deal_cards(deck, house)
             print("House got {:>7}".format(card))
             if total(house) > 21:  # House bust
-                notification(HOUSE_BUST_MESSAGE)
+                notification(HOUSE_BUST_MESSAGE + username)
                 return
 
     # Both hands are now done, see who wins
@@ -193,7 +195,7 @@ def main_menu():
         else:
             print("Not a valid input\n")
         answer = input(MAIN_MENU_MESSAGE)
-    notification(GOODBYE_MESSAGE)
+    notification(GOODBYE_MESSAGE + username)
 
 
 # Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python
@@ -204,6 +206,8 @@ def main():
     """
     sys.stdout.write("\033[0;32m")
     notification(WELCOME_MESSAGE)
+    global username
+    username = input("Your name: ")
     main_menu()
 
 
