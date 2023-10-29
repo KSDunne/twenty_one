@@ -25,6 +25,8 @@ LOSE_MESSAGE = "You lose."
 TIE_MESSAGE = "A Tie!"
 PLAYER_BUST_MESSAGE = "You bust, sorry"
 HOUSE_BUST_MESSAGE = "House bust, you win."
+REPLAY_MESSAGE = "Play another game? (Y)es or (N)o\n"
+GOODBYE_MESSAGE = "Goodbye"
 
 game_data = SHEET.worksheet("game_data")
 
@@ -175,6 +177,15 @@ def twenty_one():
     return
 
 
+def start_or_quit():
+    twenty_one()
+    answer = input(REPLAY_MESSAGE)
+    while answer in {"", "y", "Y"}:
+        twenty_one()
+        answer = input(REPLAY_MESSAGE)
+    notification(GOODBYE_MESSAGE)
+
+
 # Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python
 def main():
     """
@@ -183,7 +194,7 @@ def main():
     """
     sys.stdout.write("\033[0;32m")
     notification("WELCOME TO BLACKJACK")
-    twenty_one()
+    start_or_quit()
 
 
 main()
