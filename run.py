@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import random
 import pyfiglet
+import sys
 
 # Credit: Scope code taken from code institute love sandwiches project
 # These settings are needed to access twenty_one game data
@@ -26,15 +27,15 @@ data = game_data.get_all_values()
 
 
 # Credit: https://github.com/kpsdev1/blackjack/blob/main/run.py
+# Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python
 def greeting_screen():
     """
     This is a function for the start
     screen greeting
     """
-    welcome_sign = pyfiglet.figlet_format(
-        "WELCOME TO THE BLACKJACK TABLE", font="slant"
-    )
-    rprint(f"[blue]{welcome_sign}[/blue]")
+    sys.stdout.write("\033[0;32m")
+    welcome_sign = pyfiglet.figlet_format("WELCOME TO BLACKJACK", font="big")
+    print(welcome_sign)
 
 
 def shuffle_cards():
@@ -166,7 +167,7 @@ def main():
     Main function that calls
     all functions in order
     """
-    greeting_screen
+    greeting_screen()
     twenty_one()
 
 
