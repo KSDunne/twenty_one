@@ -31,7 +31,7 @@ def notification(text):
     """
     This is a function for the gameplay user feedback.
     """
-    print(pyfiglet.figlet_format(text, font="big"))
+    print(pyfiglet.figlet_format(text, font="big"), flush=True)
 
 
 def shuffle_cards():
