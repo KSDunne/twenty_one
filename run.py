@@ -1,8 +1,8 @@
 import gspread
-from google.oauth2.service_account import Credentials
-import random
 import pyfiglet
+import random
 import sys
+from google.oauth2.service_account import Credentials
 
 # Credit: Scope code taken from code institute love sandwiches project
 # These settings are needed to access twenty_one game data
@@ -30,13 +30,9 @@ REPLAY_MESSAGE = "Play another game? (Y)es or (N)o\n"
 GOODBYE_MESSAGE = "Goodbye, "
 MAIN_MENU_MESSAGE = "(R)ules\n(N)ew game\n(Q)uit\n\nUser input: "
 
-game_data = SHEET.worksheet("game_data")
-
-data = game_data.get_all_values()
-
-# print(data)
-
+user_data = SHEET.worksheet("user_data")
 username = None
+user_cell = None
 
 
 # Credit: https://github.com/kpsdev1/blackjack/blob/main/run.py
@@ -117,6 +113,28 @@ def rules():
     print("RuleN:\n")
 
 
+# increment the wins column for the user
+def increment_wins():
+    global user_cell
+    global user_data
+    user_data.update_cell(
+        user_cell.row,
+        user_cell.col + 1,
+        int(user_data.cell(user_cell.row, user_cell.col + 1).value) + 1,
+    )
+
+
+# increment the losses column for the user
+def increment_losses():
+    global user_cell
+    global user_data
+    user_data.update_cell(
+        user_cell.row,
+        user_cell.col + 2,
+        int(user_data.cell(user_cell.row, user_cell.col + 2).value) + 1,
+    )
+
+
 def compare_hands(house, player):
     # Determines winner
 
@@ -124,12 +142,16 @@ def compare_hands(house, player):
 
     if house_total > player_total:
         notification(LOSE_MESSAGE + username)
+        increment_losses()
     elif house_total < player_total:
         notification(WIN_MESSAGE + username)
+        increment_wins()
     elif house_total == 21 and 2 == len(house) < len(player):
         notification(LOSE_MESSAGE + username)
+        increment_losses()
     elif player_total == 21 and 2 == len(player) < len(house):
         notification(WIN_MESSAGE + username)
+        increment_wins()
     else:
         notification(TIE_MESSAGE + username)
 
@@ -164,6 +186,7 @@ def twenty_one():
             print("You got {:<7}".format(card))
             if total(player) > 21:  # you bust
                 notification(PLAYER_BUST_MESSAGE + username)
+                increment_losses()
                 return
         answer = input(DEFAULT_MESSAGE)
 
@@ -174,6 +197,7 @@ def twenty_one():
             print("House got {:>7}".format(card))
             if total(house) > 21:  # House bust
                 notification(HOUSE_BUST_MESSAGE + username)
+                increment_wins()
                 return
 
     # Both hands are now done, see who wins
@@ -208,6 +232,15 @@ def personalize():
                 "Input doesn't seem to look like a name, please enter your name again: "
             )
         else:
+            # find username if already exists, otherwise add to list
+            global user_cell
+            global user_data
+            cell = user_data.find(username)
+            if cell:
+                user_cell = cell
+            else:
+                user_data.append_row([username, 0, 0])
+                user_cell = user_data.find(username)
             break
 
 
