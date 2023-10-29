@@ -198,6 +198,19 @@ def main_menu():
     notification(GOODBYE_MESSAGE + username)
 
 
+# This name validation can be extended further
+def personalize():
+    global username
+    username = input("Your name: ")
+    while True:
+        if any(char.isdigit() for char in username):
+            username = input(
+                "Input doesn't seem to look like a name, please enter your name again: "
+            )
+        else:
+            break
+
+
 # Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python
 def main():
     """
@@ -206,8 +219,7 @@ def main():
     """
     sys.stdout.write("\033[0;32m")
     notification(WELCOME_MESSAGE)
-    global username
-    username = input("Your name: ")
+    personalize()
     main_menu()
 
 
