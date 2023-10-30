@@ -116,20 +116,18 @@ def total(hand):
 
 def rules():
     print("Rules for playing the game:\n")
-    print(
-        "Rule1: Goal of the game is to have a hand that totals higher than the dealer's, but is not > 21\n"
-    )
+    print("Rule1: Have a hand that totals higher than the dealer's, but is not > 21\n")
     print(
         "Rule2: Number cards are worth face value, colored cards (i.e. J, Q and K) are 10 and an ace can be 1 or 11\n"
     )
     print(
-        "Rule3: Players choose to hit and receive another card, or stand and keep their current hand\n"
+        "Rule3: Hit means you receive another card, stand means you keep your current hand\n"
     )
     print(
-        "Rule4: If a player is > 21, they bust and they lose. If the dealer has > 21, they also bust and the player wins\n"
+        "Rule4: If player has > 21, they bust and lose. If the dealer has > 21, they also bust and the player wins\n"
     )
     print(
-        "Rule5: The dealer must hit if they are < 17, unless the player decided to stand and the dealer already has > the player.\nThe dealer will not hit here and the dealer wins in this instance\n"
+        "Rule5: The dealer must hit if they are < 17, unless the player decided to stand and the dealer already has > the player.\nThe dealer wins in this instance\n"
     )
     print(
         "Note: The game presented here is the basic version of blackjack, therefore it is good for beginners to learn the core game.\nThis is why it was renamed to TwentyOne. Enjoy!\n"
