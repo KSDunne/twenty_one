@@ -64,6 +64,8 @@ As a site visitor,
 
 ### User personalisation
 
+### Clear screen for a new game and for restart game
+
 ## Future features
 
 ### Betting System

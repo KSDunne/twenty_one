@@ -258,6 +258,11 @@ def main_menu():
             clear()
             twenty_one()
             replay = input(REPLAY_MESSAGE)
+            if replay in {"n", "N"}:
+                answer = input(MAIN_MENU_MESSAGE)
+            while replay not in {"y", "Y", "n", "N"}:
+                print("Not a valid input\n")
+                replay = input(REPLAY_MESSAGE)
             while replay in {"y", "Y"}:
                 clear()
                 twenty_one()
