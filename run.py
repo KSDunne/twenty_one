@@ -127,10 +127,10 @@ def rules():
         "Rule4: If player has > 21, they bust and lose. If the dealer has > 21, they also bust and the player wins\n"
     )
     print(
-        "Rule5: The dealer must hit if they are < 17, unless the player decided to stand and the dealer already has > the player.\nThe dealer wins in this instance\n"
+        "Rule5: The dealer must hit if they are < 17, unless the player decided to stand and the dealer already has > the player. The dealer wins in this instance\n"
     )
     print(
-        "Note: The game presented here is the basic version of blackjack, therefore it is good for beginners to learn the core game.\nThis is why it was renamed to TwentyOne. Enjoy!\n"
+        "Note: The game presented here is the basic version of blackjack, therefore it is good for beginners to learn the core game. This is why it was renamed to TwentyOne. Enjoy!\n"
     )
 
 
