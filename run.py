@@ -121,7 +121,7 @@ def rules():
         "Rule2: Number cards are worth face value, colored cards (i.e. J, Q and K) are 10 and an ace can be 1 or 11\n"
     )
     print(
-        "Rule3: Hit means you receive another card, stand means you keep your current hand\n"
+        "Rule3: Hit means you take another card, stand means you keep your current hand\n"
     )
     print(
         "Rule4: If player has > 21, they bust and lose. If the dealer has > 21, they also bust and the player wins\n"
