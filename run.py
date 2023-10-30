@@ -265,12 +265,13 @@ def personalize():
 
 
 # Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python
+# Credit: https://github.com/pwaller/pyfiglet/blob/main/pyfiglet/__init__.py#L53
 def main():
     """
     Main function that calls all functions in order.
     Setting the terminal text color to green before calling other methods.
     """
-    sys.stdout.write("\033[0;35m")
+    sys.stdout.write("\033[0;33m")
     google_sheets()
     notification(WELCOME_MESSAGE)
     personalize()
