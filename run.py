@@ -2,6 +2,7 @@ import gspread
 import pyfiglet
 import random
 import sys
+from os import system, name
 from google.oauth2.service_account import Credentials
 
 WELCOME_MESSAGE = "WELCOME TO TWENTYONE"
@@ -49,6 +50,20 @@ def notification(text):
     This is a function for the gameplay user feedback.
     """
     print(pyfiglet.figlet_format(text, font="big"), flush=True)
+
+
+# Credit: https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28
+def clear():
+    """
+    Fuction for cleaning the terminal
+    """
+    # for windows
+    if name == "nt":
+        _ = system("cls")
+
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system("clear")
 
 
 def shuffle_cards():
@@ -240,9 +255,11 @@ def main_menu():
         if answer in {"r", "R"}:
             rules()
         elif answer in {"n", "N"}:
+            clear()
             twenty_one()
             replay = input(REPLAY_MESSAGE)
             while replay in {"y", "Y"}:
+                clear()
                 twenty_one()
                 replay = input(REPLAY_MESSAGE)
         else:
