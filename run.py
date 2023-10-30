@@ -4,7 +4,7 @@ import random
 import sys
 from google.oauth2.service_account import Credentials
 
-WELCOME_MESSAGE = "WELCOME TO TWENTY - ONE"
+WELCOME_MESSAGE = "WELCOME TO TWENTYONE"
 DEFAULT_MESSAGE = "(H)it or (S)tand? (ENTER means hit):\nUser input: "
 WIN_MESSAGE = "You win, "
 LOSE_MESSAGE = "You lose, "
