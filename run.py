@@ -270,7 +270,7 @@ def main():
     Main function that calls all functions in order.
     Setting the terminal text color to green before calling other methods.
     """
-    sys.stdout.write("\033[0;32m")
+    sys.stdout.write("\033[0;35m")
     google_sheets()
     notification(WELCOME_MESSAGE)
     personalize()
