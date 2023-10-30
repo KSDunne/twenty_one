@@ -6,7 +6,7 @@ from os import system, name
 from google.oauth2.service_account import Credentials
 
 WELCOME_MESSAGE = "WELCOME TO TWENTYONE"
-DEFAULT_MESSAGE = "(H)it or (S)tand? (ENTER means hit):\nUser input: "
+DEFAULT_MESSAGE = "(H)it, (S)tand or (R)ules? (ENTER means hit):\nUser input: "
 WIN_MESSAGE = "You win, "
 LOSE_MESSAGE = "You lose, "
 TIE_MESSAGE = "A tie between the house and "
