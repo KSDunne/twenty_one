@@ -2,7 +2,7 @@
 
 (Developer: Katie Dunne)
 
-![Game Image](docs/start_screen2.PNG)
+![Game Image](docs/start_screen.PNG)
 
 ## Live website
 
