@@ -275,7 +275,9 @@ def main_menu():
 
 def personalize():
     global username
-    username = input("Your name: ")
+    username = input(
+        "Your name (use an alias, as it will be stored for game personalization): "
+    )
     while True:
         if not any(char.isalpha() for char in username):
             username = input(
