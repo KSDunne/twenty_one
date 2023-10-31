@@ -276,7 +276,7 @@ def main_menu():
 def personalize():
     global username
     username = input(
-        "Your name (use an alias, as it will be stored for game personalization): "
+        "Enter your name (it will be stored for game personalization, so use an alias): "
     )
     while True:
         if not any(char.isalpha() for char in username):
@@ -288,6 +288,9 @@ def personalize():
             # if google sheet calls fail it won't break game functionality
             global user_cell
             global user_data
+            print(
+                f"\nWelcome to Twenty-One, {username}\n\nChoose an option from the main menu:\n"
+            )
             try:
                 cell = user_data.find(username)
                 if cell:
