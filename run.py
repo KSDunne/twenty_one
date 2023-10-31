@@ -273,12 +273,11 @@ def main_menu():
     notification(GOODBYE_MESSAGE + username)
 
 
-# This name validation can be extended further
 def personalize():
     global username
     username = input("Your name: ")
     while True:
-        if any(char.isdigit() for char in username):
+        if not any(char.isalpha() for char in username):
             username = input(
                 "Input doesn't seem to look like a name, please enter your name again: "
             )
