@@ -289,7 +289,7 @@ def personalize():
             global user_cell
             global user_data
             print(
-                f"\nWelcome to Twenty-One, {username}\n\nChoose an option from the main menu:\n"
+                f"\nWelcome to Twenty-One, {username}!\n\nChoose an option from the main menu:\n"
             )
             try:
                 cell = user_data.find(username)
