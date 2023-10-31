@@ -33,6 +33,8 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 - An ability to read the rules of the game
 - An ability to personalise the game by adding a name
 - The ability to restart the game seemlessly in the terminal, after you have finished playing a game
+- The abilty to navigate around the game with a main menu
+- The ability to see a leaderboard with the stored number of wins, if the user chooses to see it from a main menu
 
 ## User stories
 
@@ -45,6 +47,8 @@ As a site visitor,
 - I want to be able to enter a username to make the game feel personal to me
 - If I enter data that doesn't make sense to a particular step in the game I want to be informed
 - I want to be able to restart the game easily once I have finished playing the first time
+- I want the abilty to navigate around the game with a main menu
+- I want the ability to see a leaderboard with the stored number of wins, if I choose to see it from a main menu
 
 ## Features
 
@@ -65,6 +69,8 @@ As a site visitor,
 ### User personalisation
 
 ### Clear screen for a new game and for restart game
+
+### Show leaderboard when the appropriate option is picked from a main menu
 
 ## Future features
 
