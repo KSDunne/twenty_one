@@ -32,7 +32,7 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 - An intuitive game interface
 - An ability to read the rules of the game
 - An ability to personalise the game by adding a name
-- The ability to restart the game seemlessly in the terminal
+- The ability to restart the game seemlessly in the terminal, after you have finished playing a game
 
 ## User stories
 
