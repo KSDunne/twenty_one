@@ -15,7 +15,7 @@ PLAYER_BUST_MESSAGE = "You bust, sorry "
 HOUSE_BUST_MESSAGE = "House bust, you win "
 REPLAY_MESSAGE = "Play another game? (Y)es or (N)o\nUser input: "
 GOODBYE_MESSAGE = "Goodbye, "
-MAIN_MENU_MESSAGE = "(R)ules\n(N)ew game\n(Q)uit\n\nUser input: "
+MAIN_MENU_MESSAGE = "(R)ules\n(N)ew game\n(L)eaderboard\n(Q)uit\n\nUser input: "
 
 user_data = None
 username = None
@@ -256,6 +256,8 @@ def main_menu():
     while answer not in {"q", "Q"}:
         if answer in {"r", "R"}:
             rules()
+        if answer in {"l", "L"}:
+            show_scoreboard()
         elif answer in {"n", "N"}:
             clear()
             twenty_one()
@@ -347,5 +349,4 @@ def main():
     main_menu()
 
 
-show_scoreboard()
 main()
