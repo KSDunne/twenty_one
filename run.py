@@ -264,6 +264,16 @@ def main_menu():
             replay = input(REPLAY_MESSAGE)
             if replay in {"n", "N"}:
                 answer = input(MAIN_MENU_MESSAGE)
+                if answer in {"r", "R"}:
+                    rules()
+                if answer in {"l", "L"}:
+                    show_scoreboard()
+                if answer in {"q", "Q"}:
+                    notification(GOODBYE_MESSAGE + username)
+                if answer in {"n", "N"}:
+                    clear()
+                    twenty_one()
+                    replay = input(REPLAY_MESSAGE)
             while replay not in {"y", "Y", "n", "N"}:
                 print("Not a valid input\n")
                 replay = input(REPLAY_MESSAGE)
