@@ -133,7 +133,7 @@ def rules():
     print("Rules for playing the game:\n")
     print("RULE 1: Have a hand that totals higher than the dealer's, but is not > 21\n")
     print(
-        "RULE 2: Number cards are worth face value, colored cards (i.e. J, Q and K) are 10 and an ace can be 1 or 11\n"
+        "RULE 2: Number cards are worth face value, colored cards (i.e. J, Q, K) are 10 and an ace can be 1 or 11\n"
     )
     print(
         "RULE 3: Hit means you take another card, stand means you keep your current hand\n"
