@@ -10,7 +10,7 @@ Link to live website: [Twenty One](https://twenty-one-ef5033cef47c.herokuapp.com
 
 ## Purpose of the project
 
-Twenty One is a Python terminal game. The game of Twenty One is well known. It is also known as Black Jack. This game runs in the Code Institute mock terminal on Heroku. Traditionally, in a casino setting, the player would play against a dealer. This would be in a card game, table setting. In the case of this deployed game, the user is trying to beat the computer. The game built here is interactive and it provides feedback to the user as they play. All errors are handled and the user can seamlessly play again, without having to manually run the program from scratch.
+Twenty One is a Python terminal game. The game of Twenty One is well known. It is also known as Black Jack. This game runs in the Code Institute mock terminal on Heroku. Traditionally, in a casino setting, the player would play against a dealer. This would be in a card game, table setting. In the case of this deployed game, the user is trying to beat the computer. The game built here is interactive and it provides feedback to the user as they play. All user input has validation functionality and the user can seamlessly play again, without having to manually run the program from scratch.
 
 ## Table of contents
 
@@ -21,6 +21,9 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 - Create an interactive card game in a terminal using Python
 - The functionality of this game should keep the core concept of black jack. That is, playing a card game using shuffled cards, against a dealer and winning without busting over a score of 21
 - Allow the user to seemlessly restart a game without having to manually press the run program button at the top of the page and without having to refresh the page
+- Allow the user to navigate the game with a main menu
+- Write wins and losses to Google Sheets. This data could be used by a card dealer or casino business to analyse and adjust the game (e.g. adding more decks to a shuffle is one way a casino can make a card game harder if the house is losing too much)
+- Query win data to show the player a leaderboard
 
 ### Target audience
 
@@ -32,8 +35,8 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 - An intuitive game interface
 - An ability to read the rules of the game
 - An ability to personalise the game by adding a name
-- The ability to restart the game seemlessly in the terminal, after you have finished playing a game
 - The abilty to navigate around the game with a main menu
+- The ability to restart the game seemlessly in the terminal, after you have finished playing a game
 - The ability to see a leaderboard with the stored number of wins, if the user chooses to see it from a main menu
 
 ## User stories
@@ -43,16 +46,18 @@ As a site visitor,
 - I want to play a game
 - I want to see the game title when I arrive on the start screen
 - I want to see a start screen where next steps are intuitive
-- I want to be able to find the rules of the game easily
 - I want to be able to enter a username to make the game feel personal to me
 - If I enter data that doesn't make sense to a particular step in the game I want to be informed
-- I want to be able to restart the game easily once I have finished playing the first time
 - I want the abilty to navigate around the game with a main menu
+- I want to be able to find the rules of the game easily
+- I want to be able to restart the game easily once I have finished playing a game
 - I want the ability to see a leaderboard with the stored number of wins, if I choose to see it from a main menu
 
 ## Features
 
 ### Start screen
+
+Here the user will see ASCII art that displays 'WELCOME TO TWENTYONE', and have two choices:
 
 ### Main menu options
 
