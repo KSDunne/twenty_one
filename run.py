@@ -37,7 +37,6 @@ def google_sheets():
 
     try:
         # Credit: Code altered from code institute love sandwiches project, to get twenty_one spreadsheet
-        # These settings are needed to access twenty_one game data
         CREDS = Credentials.from_service_account_file("creds.json")
         SCOPED_CREDS = CREDS.with_scopes(SCOPE)
         GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
@@ -65,14 +64,17 @@ def clear():
     if name == "nt":
         _ = system("cls")
 
-    # for mac and linux(here, os.name is 'posix')
+    # for mac and linux
     else:
         _ = system("clear")
 
 
 def shuffle_cards():
-    # Here we use a set of 4 Unicode symbols for suits; spades, hearts, diamonds and clubs
-
+    """
+    This is a function to shuffle the deck of cards
+    Here we use a set of 4 Unicode symbols for
+    suits; spades, hearts, diamonds and clubs
+    """
     suits = ["\u2660", "\u2661", "\u2662", "\u2663"]
     ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
     deck = []
@@ -89,7 +91,6 @@ def shuffle_cards():
 
 
 my_deck = shuffle_cards()
-# print(my_deck)
 
 
 def deal_cards(deck, player):
