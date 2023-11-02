@@ -222,6 +222,9 @@ def twenty_one():
 
     answer = input(DEFAULT_MESSAGE)
     # 's' or 'S' skips player turn and goes to house play
+    while answer not in {"", "h", "hit", "s", "S", "r", "R"}:
+        print("Not a valid input\n")
+        answer = input(DEFAULT_MESSAGE)
     while answer in {"", "h", "hit", "s", "S", "r", "R"}:
         if answer in {"r", "R"}:
             rules()
