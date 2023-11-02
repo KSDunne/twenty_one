@@ -227,7 +227,7 @@ def twenty_one():
             rules()
         elif answer in {"s", "S"}:
             break
-        else:
+        elif answer in {"", "h", "hit"}:
             card = deal_cards(deck, player)
             print("You got {:<7}".format(card))
             if total(player) > 21:  # you bust
@@ -235,6 +235,15 @@ def twenty_one():
                 increment_losses()
                 return
         answer = input(DEFAULT_MESSAGE)
+    else:
+        print("Not a valid input\n")
+        card = deal_cards(deck, player)
+        print("You got {:<7}".format(card))
+        if total(player) > 21:  # you bust
+            notification(PLAYER_BUST_MESSAGE + username)
+            increment_losses()
+            return
+    answer = input(DEFAULT_MESSAGE)
 
     # House must play only if house total is less than or equal to player total
     if total(house) <= total(player):
