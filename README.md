@@ -57,7 +57,11 @@ As a site visitor,
 
 ### Start screen
 
-Here the user will see ASCII art that displays 'WELCOME TO TWENTYONE', and have two choices:
+Here the user will see ASCII art that displays 'WELCOME TO TWENTYONE'. The user will be prompted to enter their name. They are also told to use a fake name because the name they enter will be stored for game personalization. The name entered here is used for the you win message, for the you lose message and for the goodbye screen. The name is also sent to Google sheets and the win or loss is updated at the appropriate time. This data can be queried via a leaderboard or analysed by the card dealer.
+
+#### Start screen image with ascii art and promt to add a name
+
+![Start screen image](docs/start_screen.png)
 
 ### Main menu options
 
