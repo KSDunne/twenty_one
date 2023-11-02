@@ -22,7 +22,7 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 - The functionality of this game should keep the core concept of black jack. That is, playing a card game using shuffled cards, against a dealer and winning without busting over a score of 21
 - Allow the user to seemlessly restart a game without having to manually press the run program button at the top of the page and without having to refresh the page
 - Allow the user to navigate the game with a main menu
-- Write wins and losses to Google Sheets. This data could be used by a card dealer or casino business to analyse and adjust the game (e.g. adding more decks to a shuffle is one way a casino can make a card game harder if the house is losing too much)
+- Write player wins and losses to Google Sheets. This data could be used by a card dealer or casino business to analyse and adjust the game (e.g. adding more decks to a shuffle is one way a casino can make a card game harder if the house is losing too much)
 - Query win data to show the player a leaderboard
 
 ### Target audience
@@ -33,9 +33,9 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 ### User requirements and expectations
 
 - An intuitive game interface
-- An ability to read the rules of the game
 - An ability to personalise the game by adding a name
 - The abilty to navigate around the game with a main menu
+- An ability to read the rules of the game
 - The ability to restart the game seemlessly in the terminal, after you have finished playing a game
 - The ability to see a leaderboard with the stored number of wins, if the user chooses to see it from a main menu
 
