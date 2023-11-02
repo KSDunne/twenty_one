@@ -61,7 +61,7 @@ Here the user will see ASCII art that displays 'WELCOME TO TWENTYONE'. The user 
 
 #### Start screen image with ascii art and promt to add a name
 
-![Start screen image](docs/start_screen.png)
+![Start screen image](docs/start_screen.PNG)
 
 ### Main menu options
 
