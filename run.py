@@ -22,10 +22,13 @@ username = None
 user_cell = None
 
 
-# if google sheets calls fail, game doesn't break
 def google_sheets():
-    # Credit: Scope code taken from code institute love sandwiches project
-    # These settings are needed to access twenty_one game data
+    """
+    This is a function with a try and except to make sure that
+    if the google sheets call fails, the game can still be played.
+    The settings here are the settings needed to access twenty_one game data.
+    Scope code was taken from code institute love sandwiches project.
+    """
     SCOPE = [
         "https://www.googleapis.com/auth/spreadsheets",
         "https://www.googleapis.com/auth/drive.file",
