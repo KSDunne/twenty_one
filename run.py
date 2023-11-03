@@ -1,5 +1,4 @@
 import gspread
-import pyfiglet
 import random
 import sys
 from os import system, name
@@ -51,7 +50,7 @@ def google_sheets():
 def notification(text):
     """
     This is a notification function for gameplay user feedback. pyfiglet takes ASCII text
-    and renders it in ASCII art fonts. The font used here is called big. The art is displayed on 
+    and renders it in ASCII art fonts. The font used here is called big. The art is displayed on
     the start screen. It is also displayed on the win, lose and goodbye screens.
     """
     print(pyfiglet.figlet_format(text, font="big"))
@@ -60,7 +59,8 @@ def notification(text):
 # Credit: https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28
 def clear():
     """
-    Fuction for cleaning the terminal
+    Here is a function for clearing the terminal. This function is good for user experience
+    during gameplay, as the terminal backlog can look confusing.
     """
     # for windows
     if name == "nt":
@@ -73,9 +73,8 @@ def clear():
 
 def shuffle_cards():
     """
-    This is a function to shuffle the deck of cards
-    Here we use a set of 4 Unicode symbols for
-    suits; spades, hearts, diamonds and clubs
+    This is a function to shuffle the deck of cards. Here we use a set
+    of 4 Unicode symbols for suits; spades, hearts, diamonds and clubs.
     """
     suits = ["\u2660", "\u2661", "\u2662", "\u2663"]
     ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
@@ -96,7 +95,10 @@ my_deck = shuffle_cards()
 
 
 def deal_cards(deck, player):
-    # Deal card to the player and remove that card from the deck. The list will change from length of 52 to 51
+    """
+    Here is a function that deals a card to the player and removes
+    that card from the deck. The list will change from length of 52 to 51.
+    """
 
     card = deck.pop()
     player.append(card)
@@ -104,7 +106,10 @@ def deal_cards(deck, player):
 
 
 def total(hand):
-    # Compute the total of hand
+    """
+    This function computes the numerical total of a hand. It is used at
+    multiple different times to calculate the total for the player and the dealer.
+    """
 
     values = {
         "2": 2,
@@ -137,6 +142,11 @@ def total(hand):
 
 
 def rules():
+    """
+    This prints 5 basic rules of the game to the screen. The game presented here is a simple
+    version of blackjack and so it was renamed to twenty-one.
+    """
+
     print("Rules for playing the game:\n")
     print("RULE 1: Have a hand that totals higher than the dealer's, but is not > 21\n")
     print(
@@ -156,9 +166,11 @@ def rules():
     )
 
 
-# increment the wins column for the user
-# in case google sheet call fails, game doesn't break
 def increment_wins():
+    """
+    This function increments the wins column for the user in google sheets.
+    Error handling was used here, so if the google sheet call fails, the game doesn't break.
+    """
     global user_cell
     global user_data
     try:
@@ -172,9 +184,11 @@ def increment_wins():
         return
 
 
-# increment the losses column for the user
-# in case google sheet call fails, game doesn't break
 def increment_losses():
+    """
+    This function increments the losses column for the user in google sheets.
+    Error handling was used here, so if the google sheet call fails, the game doesn't break.
+    """
     global user_cell
     global user_data
     try:
@@ -188,8 +202,10 @@ def increment_losses():
 
 
 def compare_hands(house, player):
-    # Determines winner
-
+    """
+    This is a comparison function that looks at the numerical value of the players hand and the dealers hand
+    and determines a winner.
+    """
     house_total, player_total = total(house), total(player)
 
     if house_total > player_total:
@@ -209,8 +225,10 @@ def compare_hands(house, player):
 
 
 def twenty_one():
-    # Simulates a game of blackjack
-
+    """
+    The twenty one function simulates a game of blackjack. Here is where all of the core game functions
+    are called appropriately.
+    """
     deck = shuffle_cards()
     house = []
     player = []
@@ -260,6 +278,10 @@ def twenty_one():
 
 
 def main_menu():
+    """
+    Here is the main menu function. It shows the user a list of options to navigate the game.
+    The options shown are: (R)ules, (N)ew game, (L)eaderboard, and (Q)uit.
+    """
     answer = input(MAIN_MENU_MESSAGE)
     while answer not in {"q", "Q"}:
         if answer in {"r", "R"}:
@@ -298,8 +320,8 @@ def main_menu():
 # Credit: https://github.com/adrianskelton/project3/blob/main/run.py#L138
 def show_scoreboard():
     """
-    Function to show the scoreboard
-    This is called in the main menu at the start when selected by the user
+    Function to show the scoreboard. This is called in the main menu
+    when selected by the user.
     """
     SCOPE = [
         "https://www.googleapis.com/auth/spreadsheets",
@@ -324,6 +346,10 @@ def show_scoreboard():
 
 
 def personalize():
+    """
+    Here is a function that takes the user name as an input. It can then be used in the
+    win message, lose message, bust message and goodbye messages for personalization.
+    """
     global username
     username = input(
         "Your name will be stored for game personalization, so use an alias.\n\nEnter your name: "
@@ -358,7 +384,7 @@ def personalize():
 def main():
     """
     Main function that calls all functions in order.
-    Setting the terminal text color to green before calling other methods.
+    Setting the terminal text color to white before calling other methods.
     """
     sys.stdout.write("\033[0;97m")
     google_sheets()
