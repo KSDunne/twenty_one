@@ -73,7 +73,7 @@ After the user enters their name. It is used in string formatting to welcome the
 
 User input validation is used is all parts of the game where a user must input something to continue the game. For example, see below - if the user enters special characers into the main menu input option, they will be told it is not a valid input.
 
-![Main menu input validation image](docs/main_menu_input_validation2.PNG)
+![Main menu input validation image](docs/main_menu_input_validation.PNG)
 
 ### Rules
 
