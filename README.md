@@ -109,11 +109,17 @@ Interaction with an API for example, google sheets.
 
 ### Centered mock terminal
 
-### Flowcharts
+### Flow Chart
+
+A core game flow chart was designed to help with writing the game functionality. See below.
 
 ![Core Game Flowchart](docs/design/core_game_flow.png)
 
-## Data models
+## Data model
+
+There is create, read and update data functionality built into this game. Error handling for the google sheets api is also build in to the run file so that the game is still playable even if the call to google sheets fails.
+
+![Data Model](docs/design/data_model_twenty_one.png)
 
 ## Technology
 
