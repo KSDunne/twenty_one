@@ -133,13 +133,15 @@ Interaction with an API for example, google sheets.
 
 ### Centered mock terminal
 
-### Flow Chart
+### Flow Charts
+
+#### Core game flowchart
 
 A core game flow chart was designed to help with writing the game functionality. See below.
 
 ![Core Game Flowchart](docs/design/core_game_flow.png)
 
-## Data model
+#### Data flowchart
 
 There is create, read and update data functionality built into this game. Error handling for the google sheets api is also build in to the run file so that the game is still playable even if the call to google sheets fails.
 
@@ -159,6 +161,62 @@ There is create, read and update data functionality built into this game. Error 
 - [Visual Studio Code IDE](https://code.visualstudio.com/)
 - [Prettier Code Formatter](https://prettier.io/)
 - [Venngage's Accessible color palette generator](https://venngage.com/tools/accessible-color-palette-generator)
+
+## Testing
+
+### Code validation
+
+#### PEP8 validation
+
+#### HTML validation
+
+#### CSS validation
+
+### Accessibility and Lighthouse
+
+Accessibility was at 94 brought it up to 100
+
+### Manual testing
+
+#### Browser compatibility testing
+
+- All pages were tested on the following browsers, Chrome, Edge, Firefox, Safari and Opera
+
+- See browser compatibility testing results in the table below
+
+| browser compatibility | chrome | edge | firefox | safari | opera |
+| --------------------- | ------ | ---- | ------- | ------ | ----- |
+| intended appearance   | pass   | pass | pass    | pass   | pass  |
+
+#### Testing links on the site
+
+### Feature testing table
+
+### User story testing
+
+User Story
+
+### Fixed bugs
+
+See the input validation rules bug below
+
+![Rules bug](docs/bug_rules.PNG)
+
+### Unfixed bugs
+
+No unfixed bugs
+
+### Supported screens and browsers
+
+#### Screens
+
+#### Browsers
+
+- Chrome
+- Edge
+- Firefox
+- Safari
+- Opera
 
 ## Deployment
 
