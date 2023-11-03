@@ -83,7 +83,13 @@ The rules function prints 5 basic rules of the game to the screen. The game pres
 
 ### Win screen
 
-![Win screen image](docs/house_bust_you_win_ss.PNG)
+You win screenshot below
+
+![You win screen image](docs/house_bust_you_win_ss.PNG)
+
+House bust you win screenshot below
+
+![House bust you win screen image](docs/house_bust_you_win_ss.PNG)
 
 ### Lose screen
 
@@ -91,13 +97,23 @@ The rules function prints 5 basic rules of the game to the screen. The game pres
 
 ### Goodbye screen
 
+Below is a screenshot of the personalized goodbye screen
+
 ### Restart game
+
+Below is a screenshot of the option to restart the game. It is a yes or no question
 
 ### User personalisation
 
+Below is a screenshot of an example of where user personalization is used in the game
+
 ### Clear screen for a new game and for restart game
 
+Below is a screenshot of how the screen clears at certain times to make the user experience less confusing and fun to use.
+
 ### Show leaderboard when the appropriate option is picked from a main menu
+
+![Leaderboard screenshot](docs/leaderboard_screenshot.PNG)
 
 ## Future features
 
