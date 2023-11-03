@@ -119,7 +119,7 @@ A core game flow chart was designed to help with writing the game functionality.
 
 There is create, read and update data functionality built into this game. Error handling for the google sheets api is also build in to the run file so that the game is still playable even if the call to google sheets fails.
 
-![Data Model](docs/design/data_model_twenty_one.png)
+![Data Model Flowchart](docs/design/data_model_twenty_one.png)
 
 ## Technology
 
