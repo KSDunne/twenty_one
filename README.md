@@ -77,6 +77,10 @@ User input validation is used is all parts of the game where a user must input s
 
 ### Rules
 
+The rules function prints 5 basic rules of the game to the screen. The game presented here is a simple version of blackjack and so it was renamed to twenty-one.
+
+![Screenshot of rules](docs/rules_screenshot.PNG)
+
 ### Win screen
 
 ### Lose screen
