@@ -83,7 +83,11 @@ The rules function prints 5 basic rules of the game to the screen. The game pres
 
 ### Win screen
 
+![Win screen image](docs/house_bust_you_win_ss.PNG)
+
 ### Lose screen
+
+![Lose screen image](docs/you_lose_ss.PNG)
 
 ### Goodbye screen
 
