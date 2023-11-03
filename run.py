@@ -1,4 +1,5 @@
 import gspread
+import pyfiglet
 import random
 import sys
 from os import system, name
