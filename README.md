@@ -67,7 +67,7 @@ Here the user will see ASCII art that displays 'WELCOME TO TWENTYONE'. The user 
 
 After the user enters their name. It is used in string formatting to welcome them to the game of Twenty-One. Then the user is asked to choose an option from the main menu. Here, the user is given the option to press r or R for rules, n or N for a new game, l or L to view the leaderboard and q or Q to quit. Every other character, number or special character shows the user a message saying, not a valid input.
 
-![Main menu image](docs/main_menu2.PNG)
+![Main menu image](docs/main_menu.PNG)
 
 ### Input validation
 
