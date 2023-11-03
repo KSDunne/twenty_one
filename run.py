@@ -50,9 +50,11 @@ def google_sheets():
 # Credit: https://github.com/kpsdev1/blackjack/blob/main/run.py
 def notification(text):
     """
-    This is a function for the gameplay user feedback.
+    This is a notification function for gameplay user feedback. pyfiglet takes ASCII text
+    and renders it in ASCII art fonts. The font used here is called big. The art is displayed on 
+    the start screen. It is also displayed on the win, lose and goodbye screens.
     """
-    print(pyfiglet.figlet_format(text, font="big"), flush=True)
+    print(pyfiglet.figlet_format(text, font="big"))
 
 
 # Credit: https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28
