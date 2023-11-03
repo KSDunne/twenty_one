@@ -111,7 +111,7 @@ Interaction with an API for example, google sheets.
 
 ### Flowcharts
 
-![Core Game Flowchart](docs/design/core_game_flowchart0311.png)
+![Core Game Flowchart](docs/design/core_game_flowchart.png)
 
 ## Data models
 
