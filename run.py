@@ -1,4 +1,4 @@
-import pyfiglet
+import messages
 import random
 import sys
 from os import system, name
@@ -6,30 +6,10 @@ from colorama import Fore  # color styling
 from spreadsheets import worksheet
 from rules import print_rules
 
-WELCOME_MESSAGE = "WELCOME TO TWENTYONE"
-DEFAULT_MESSAGE = "(H)it, (S)tand or (R)ules? (ENTER means hit):\nUser input: "
-WIN_MESSAGE = "You win, "
-LOSE_MESSAGE = "You lose, "
-TIE_MESSAGE = "A tie between the house and "
-PLAYER_BUST_MESSAGE = "You bust, sorry "
-HOUSE_BUST_MESSAGE = "House bust, you win "
-REPLAY_MESSAGE = "Play another game? (Y)es or (N)o\nUser input: "
-GOODBYE_MESSAGE = "Goodbye, "
-MAIN_MENU_MESSAGE = "(R)ules\n(N)ew game\n(L)eaderboard\n(Q)uit\n\nUser input: "
 
 user_data = None
 username = None
 user_cell = None
-
-
-# Credit: https://github.com/kpsdev1/blackjack/blob/main/run.py
-def notification(text):
-    """
-    This is a notification function for gameplay user feedback. pyfiglet takes ASCII text
-    and renders it in ASCII art fonts. The font used here is called big. The art is displayed on
-    the start screen. It is also displayed on the win, lose and goodbye screens.
-    """
-    print(pyfiglet.figlet_format(text, font="big"))
 
 
 # Credit: https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28
@@ -160,19 +140,19 @@ def compare_hands(house, player):
     house_total, player_total = total(house), total(player)
 
     if house_total > player_total:
-        notification(LOSE_MESSAGE + username)
+        messages.notification(messages.LOSE_MESSAGE + username)
         increment_losses()
     elif house_total < player_total:
-        notification(WIN_MESSAGE + username)
+        messages.notification(messages.WIN_MESSAGE + username)
         increment_wins()
     elif house_total == 21 and 2 == len(house) < len(player):
-        notification(LOSE_MESSAGE + username)
+        messages.notification(messages.LOSE_MESSAGE + username)
         increment_losses()
     elif player_total == 21 and 2 == len(player) < len(house):
-        notification(WIN_MESSAGE + username)
+        messages.notification(messages.WIN_MESSAGE + username)
         increment_wins()
     else:
-        notification(TIE_MESSAGE + username)
+        messages.notification(messages.TIE_MESSAGE + username)
 
 
 def twenty_one():
@@ -195,11 +175,11 @@ def twenty_one():
 
     # Give cards to user as requested
 
-    answer = input(DEFAULT_MESSAGE)
+    answer = input(messages.DEFAULT_MESSAGE)
     # 's' or 'S' skips player turn and goes to house play
     while answer not in {"", "h", "hit", "s", "S", "r", "R"}:
         print("Not a valid input\n")
-        answer = input(DEFAULT_MESSAGE)
+        answer = input(messages.DEFAULT_MESSAGE)
     while answer in {"", "h", "hit", "s", "S", "r", "R"}:
         if answer in {"r", "R"}:
             print_rules()
@@ -209,10 +189,10 @@ def twenty_one():
             card = deal_cards(deck, player)
             print("You got {:<7}".format(card))
             if total(player) > 21:  # you bust
-                notification(PLAYER_BUST_MESSAGE + username)
+                messages.notification(messages.PLAYER_BUST_MESSAGE + username)
                 increment_losses()
                 return
-        answer = input(DEFAULT_MESSAGE)
+        answer = input(messages.DEFAULT_MESSAGE)
 
     # House must play only if house total is less than or equal to player total
     if total(house) <= total(player):
@@ -220,7 +200,7 @@ def twenty_one():
             card = deal_cards(deck, house)
             print("House got {:>7}".format(card))
             if total(house) > 21:  # House bust
-                notification(HOUSE_BUST_MESSAGE + username)
+                messages.notification(messages.HOUSE_BUST_MESSAGE + username)
                 increment_wins()
                 return
     # Both hands are now done, see who wins
@@ -233,7 +213,7 @@ def main_menu():
     Here is the main menu function. It shows the user a list of options to navigate the game.
     The options shown are: (R)ules, (N)ew game, (L)eaderboard, and (Q)uit.
     """
-    answer = input(MAIN_MENU_MESSAGE)
+    answer = input(messages.MAIN_MENU_MESSAGE)
     while answer not in {"q", "Q"}:
         if answer in {"r", "R"}:
             print_rules()
@@ -242,30 +222,30 @@ def main_menu():
         elif answer in {"n", "N"}:
             clear()
             twenty_one()
-            replay = input(REPLAY_MESSAGE)
+            replay = input(messages.REPLAY_MESSAGE)
             if replay in {"n", "N"}:
-                answer = input(MAIN_MENU_MESSAGE)
+                answer = input(messages.MAIN_MENU_MESSAGE)
                 if answer in {"r", "R"}:
                     print_rules()
                 if answer in {"l", "L"}:
                     show_scoreboard()
                 if answer in {"q", "Q"}:
-                    notification(GOODBYE_MESSAGE + username)
+                    messages.notification(messages.GOODBYE_MESSAGE + username)
                 if answer in {"n", "N"}:
                     clear()
                     twenty_one()
-                    replay = input(REPLAY_MESSAGE)
+                    replay = input(messages.REPLAY_MESSAGE)
             while replay not in {"y", "Y", "n", "N"}:
                 print("Not a valid input\n")
-                replay = input(REPLAY_MESSAGE)
+                replay = input(messages.REPLAY_MESSAGE)
             while replay in {"y", "Y"}:
                 clear()
                 twenty_one()
-                replay = input(REPLAY_MESSAGE)
+                replay = input(messages.REPLAY_MESSAGE)
         else:
             print("Not a valid input\n")
-        answer = input(MAIN_MENU_MESSAGE)
-    notification(GOODBYE_MESSAGE + username)
+        answer = input(messages.MAIN_MENU_MESSAGE)
+    messages.notification(messages.GOODBYE_MESSAGE + username)
 
 
 # Credit: https://github.com/adrianskelton/project3/blob/main/run.py#L138
@@ -340,7 +320,7 @@ def main():
     sys.stdout.write("\033[0;97m")
     global user_data
     user_data = worksheet()
-    notification(WELCOME_MESSAGE)
+    messages.notification(messages.WELCOME_MESSAGE)
     personalize()
     main_menu()
 
