@@ -184,6 +184,9 @@ def twenty_one(user_data, username, user_cell):
                 increment_losses(user_data, user_cell)
                 return
         answer = input(messages.DEFAULT_MESSAGE)
+        while answer not in {"", "h", "hit", "s", "S", "r", "R"}:
+            print("Not a valid input\n")
+            answer = input(messages.DEFAULT_MESSAGE)
 
     # House must play only if house total is less than or equal to player total
     if total(house) <= total(player):
