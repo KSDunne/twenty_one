@@ -208,7 +208,7 @@ def main_menu(user_data, username, user_cell):
     while answer not in {"q", "Q"}:
         if answer in {"r", "R"}:
             print_rules()
-        if answer in {"l", "L"}:
+        elif answer in {"l", "L"}:
             show_scoreboard(user_data)
         elif answer in {"n", "N"}:
             clear()
