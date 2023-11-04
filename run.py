@@ -168,10 +168,10 @@ def twenty_one(user_data, username, user_cell):
 
     answer = input(messages.DEFAULT_MESSAGE)
     # 's' or 'S' skips player turn and goes to house play
-    while answer not in {"", "h", "hit", "s", "S", "r", "R"}:
+    while answer not in {"", "h", "H", "s", "S", "r", "R"}:
         print("Not a valid input\n")
         answer = input(messages.DEFAULT_MESSAGE)
-    while answer in {"", "h", "hit", "s", "S", "r", "R"}:
+    while answer in {"", "h", "H", "s", "S", "r", "R"}:
         if answer in {"r", "R"}:
             print_rules()
         elif answer in {"s", "S"}:
@@ -184,7 +184,7 @@ def twenty_one(user_data, username, user_cell):
                 increment_losses(user_data, user_cell)
                 return
         answer = input(messages.DEFAULT_MESSAGE)
-        while answer not in {"", "h", "hit", "s", "S", "r", "R"}:
+        while answer not in {"", "h", "H", "s", "S", "r", "R"}:
             print("Not a valid input\n")
             answer = input(messages.DEFAULT_MESSAGE)
 
