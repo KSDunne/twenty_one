@@ -1,25 +1,9 @@
 import messages
 import random
 import sys
-from os import system, name
 from colorama import Fore  # color styling
 from spreadsheets import worksheet
 from rules import print_rules
-
-
-# Credit: https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28
-def clear():
-    """
-    Here is a function for clearing the terminal. This function is good for user experience
-    during gameplay, as the terminal backlog can look confusing.
-    """
-    # for windows
-    if name == "nt":
-        _ = system("cls")
-
-    # for mac and linux
-    else:
-        _ = system("clear")
 
 
 def shuffle_cards():
@@ -95,32 +79,26 @@ def total(hand):
 def increment_wins(user_data, user_cell):
     """
     This function increments the wins column for the user in google sheets.
-    Error handling was used here, so if the google sheet call fails, the game doesn't break.
     """
-    try:
+    if user_data is not None and user_cell is not None:
         user_data.update_cell(
             user_cell.row,
             user_cell.col + 1,
             int(user_data.cell(user_cell.row, user_cell.col + 1).value) + 1,
         )
         user_data.sort((user_cell.col + 1, "des"))
-    except:
-        return
 
 
 def increment_losses(user_data, user_cell):
     """
     This function increments the losses column for the user in google sheets.
-    Error handling was used here, so if the google sheet call fails, the game doesn't break.
     """
-    try:
+    if user_data is not None and user_cell is not None:
         user_data.update_cell(
             user_cell.row,
             user_cell.col + 2,
             int(user_data.cell(user_cell.row, user_cell.col + 2).value) + 1,
         )
-    except:
-        return
 
 
 def compare_hands(house, player, user_data, username, user_cell):
@@ -214,7 +192,7 @@ def main_menu(user_data, username, user_cell):
         elif answer in {"l", "L"}:
             show_scoreboard(user_data)
         elif answer in {"n", "N"}:
-            clear()
+            messages.clear()
             twenty_one(user_data, username, user_cell)
             replay = input(messages.REPLAY_MESSAGE)
             if replay in {"n", "N"}:
@@ -226,14 +204,14 @@ def main_menu(user_data, username, user_cell):
                 if answer in {"q", "Q"}:
                     messages.notification(messages.GOODBYE_MESSAGE + username)
                 if answer in {"n", "N"}:
-                    clear()
+                    messages.clear()
                     twenty_one(user_data, username, user_cell)
                     replay = input(messages.REPLAY_MESSAGE)
             while replay not in {"y", "Y", "n", "N"}:
                 print("Not a valid input\n")
                 replay = input(messages.REPLAY_MESSAGE)
             while replay in {"y", "Y"}:
-                clear()
+                messages.clear()
                 twenty_one(user_data, username, user_cell)
                 replay = input(messages.REPLAY_MESSAGE)
         else:
@@ -248,7 +226,6 @@ def show_scoreboard(user_data):
     Function to show the scoreboard. This is called in the main menu
     when selected by the user.
     """
-    user_data = worksheet()
     if user_data is not None:
         scoreboard_players = user_data.col_values(1)[1:11]
         scoreboard_scores = user_data.col_values(2)[1:11]
@@ -280,7 +257,7 @@ def personalize(user_data):
             print(
                 f"\nWelcome to Twenty-One, {username}!\n\nChoose an option from the main menu:\n"
             )
-            try:
+            if user_data is not None:
                 cell = user_data.find(username)
                 if cell:
                     user_cell = cell
@@ -289,8 +266,8 @@ def personalize(user_data):
                     user_cell = user_data.find(username)
 
                 return username, user_cell
-            except:
-                return None, None
+            else:
+                return "", None
 
 
 # Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python

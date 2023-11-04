@@ -1,4 +1,5 @@
 import pyfiglet
+from os import system, name
 
 WELCOME_MESSAGE = "WELCOME TO TWENTYONE"
 DEFAULT_MESSAGE = "(H)it, (S)tand or (R)ules? (ENTER means hit):\nUser input: "
@@ -20,3 +21,18 @@ def notification(text):
     the start screen. It is also displayed on the win, lose and goodbye screens.
     """
     print(pyfiglet.figlet_format(text, font="big"))
+
+
+# Credit: https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28
+def clear():
+    """
+    Here is a function for clearing the terminal. This function is good for user experience
+    during gameplay, as the terminal backlog can look confusing.
+    """
+    # for windows
+    if name == "nt":
+        _ = system("cls")
+
+    # for mac and linux
+    else:
+        _ = system("clear")
