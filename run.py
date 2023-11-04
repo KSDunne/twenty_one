@@ -1,10 +1,9 @@
-import gspread
 import pyfiglet
 import random
 import sys
 from os import system, name
-from google.oauth2.service_account import Credentials
 from colorama import Fore  # color styling
+from spreadsheets import worksheet
 
 WELCOME_MESSAGE = "WELCOME TO TWENTYONE"
 DEFAULT_MESSAGE = "(H)it, (S)tand or (R)ules? (ENTER means hit):\nUser input: "
@@ -20,31 +19,6 @@ MAIN_MENU_MESSAGE = "(R)ules\n(N)ew game\n(L)eaderboard\n(Q)uit\n\nUser input: "
 user_data = None
 username = None
 user_cell = None
-
-
-def google_sheets():
-    """
-    This is a function with a try and except to make sure that
-    if the google sheets call fails, the game can still be played.
-    The settings here are the settings needed to access twenty_one game data.
-    Scope code was taken from code institute love sandwiches project.
-    """
-    SCOPE = [
-        "https://www.googleapis.com/auth/spreadsheets",
-        "https://www.googleapis.com/auth/drive.file",
-        "https://www.googleapis.com/auth/drive",
-    ]
-
-    try:
-        # Credit: Code altered from code institute love sandwiches project, to get twenty_one spreadsheet
-        CREDS = Credentials.from_service_account_file("creds.json")
-        SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-        GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-        SHEET = GSPREAD_CLIENT.open("twenty_one")
-        global user_data
-        user_data = SHEET.worksheet("user_data")
-    except:
-        return
 
 
 # Credit: https://github.com/kpsdev1/blackjack/blob/main/run.py
@@ -388,7 +362,8 @@ def main():
     Setting the terminal text color to white before calling other methods.
     """
     sys.stdout.write("\033[0;97m")
-    google_sheets()
+    global user_data
+    user_data = worksheet()
     notification(WELCOME_MESSAGE)
     personalize()
     main_menu()
