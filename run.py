@@ -7,11 +7,6 @@ from spreadsheets import worksheet
 from rules import print_rules
 
 
-user_data = None
-username = None
-user_cell = None
-
-
 # Credit: https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28
 def clear():
     """
@@ -97,13 +92,11 @@ def total(hand):
     return result
 
 
-def increment_wins():
+def increment_wins(user_data, user_cell):
     """
     This function increments the wins column for the user in google sheets.
     Error handling was used here, so if the google sheet call fails, the game doesn't break.
     """
-    global user_cell
-    global user_data
     try:
         user_data.update_cell(
             user_cell.row,
@@ -115,13 +108,11 @@ def increment_wins():
         return
 
 
-def increment_losses():
+def increment_losses(user_data, user_cell):
     """
     This function increments the losses column for the user in google sheets.
     Error handling was used here, so if the google sheet call fails, the game doesn't break.
     """
-    global user_cell
-    global user_data
     try:
         user_data.update_cell(
             user_cell.row,
@@ -132,7 +123,7 @@ def increment_losses():
         return
 
 
-def compare_hands(house, player):
+def compare_hands(house, player, user_data, username, user_cell):
     """
     This is a comparison function that looks at the numerical value of the players hand and the dealers hand
     and determines a winner.
@@ -141,21 +132,21 @@ def compare_hands(house, player):
 
     if house_total > player_total:
         messages.notification(messages.LOSE_MESSAGE + username)
-        increment_losses()
+        increment_losses(user_data, user_cell)
     elif house_total < player_total:
         messages.notification(messages.WIN_MESSAGE + username)
-        increment_wins()
+        increment_wins(user_data, user_cell)
     elif house_total == 21 and 2 == len(house) < len(player):
         messages.notification(messages.LOSE_MESSAGE + username)
-        increment_losses()
+        increment_losses(user_data, user_cell)
     elif player_total == 21 and 2 == len(player) < len(house):
         messages.notification(messages.WIN_MESSAGE + username)
-        increment_wins()
+        increment_wins(user_data, user_cell)
     else:
         messages.notification(messages.TIE_MESSAGE + username)
 
 
-def twenty_one():
+def twenty_one(user_data, username, user_cell):
     """
     The twenty one function simulates a game of blackjack. Here is where all of the core game functions
     are called appropriately.
@@ -190,7 +181,7 @@ def twenty_one():
             print("You got {:<7}".format(card))
             if total(player) > 21:  # you bust
                 messages.notification(messages.PLAYER_BUST_MESSAGE + username)
-                increment_losses()
+                increment_losses(user_data, user_cell)
                 return
         answer = input(messages.DEFAULT_MESSAGE)
 
@@ -201,14 +192,14 @@ def twenty_one():
             print("House got {:>7}".format(card))
             if total(house) > 21:  # House bust
                 messages.notification(messages.HOUSE_BUST_MESSAGE + username)
-                increment_wins()
+                increment_wins(user_data, user_cell)
                 return
     # Both hands are now done, see who wins
-    compare_hands(house, player)
+    compare_hands(house, player, user_data, username, user_cell)
     return
 
 
-def main_menu():
+def main_menu(user_data, username, user_cell):
     """
     Here is the main menu function. It shows the user a list of options to navigate the game.
     The options shown are: (R)ules, (N)ew game, (L)eaderboard, and (Q)uit.
@@ -218,29 +209,29 @@ def main_menu():
         if answer in {"r", "R"}:
             print_rules()
         if answer in {"l", "L"}:
-            show_scoreboard()
+            show_scoreboard(user_data)
         elif answer in {"n", "N"}:
             clear()
-            twenty_one()
+            twenty_one(user_data, username, user_cell)
             replay = input(messages.REPLAY_MESSAGE)
             if replay in {"n", "N"}:
                 answer = input(messages.MAIN_MENU_MESSAGE)
                 if answer in {"r", "R"}:
                     print_rules()
                 if answer in {"l", "L"}:
-                    show_scoreboard()
+                    show_scoreboard(user_data)
                 if answer in {"q", "Q"}:
                     messages.notification(messages.GOODBYE_MESSAGE + username)
                 if answer in {"n", "N"}:
                     clear()
-                    twenty_one()
+                    twenty_one(user_data, username, user_cell)
                     replay = input(messages.REPLAY_MESSAGE)
             while replay not in {"y", "Y", "n", "N"}:
                 print("Not a valid input\n")
                 replay = input(messages.REPLAY_MESSAGE)
             while replay in {"y", "Y"}:
                 clear()
-                twenty_one()
+                twenty_one(user_data, username, user_cell)
                 replay = input(messages.REPLAY_MESSAGE)
         else:
             print("Not a valid input\n")
@@ -249,12 +240,11 @@ def main_menu():
 
 
 # Credit: https://github.com/adrianskelton/project3/blob/main/run.py#L138
-def show_scoreboard():
+def show_scoreboard(user_data):
     """
     Function to show the scoreboard. This is called in the main menu
     when selected by the user.
     """
-    global user_data
     user_data = worksheet()
     if user_data is not None:
         scoreboard_players = user_data.col_values(1)[1:11]
@@ -268,12 +258,11 @@ def show_scoreboard():
         input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
-def personalize():
+def personalize(user_data):
     """
     Here is a function that takes the user name as an input. It can then be used in the
     win message, lose message, bust message and goodbye messages for personalization.
     """
-    global username
     username = input(
         "Your name will be stored for game personalization, so use an alias.\n\nEnter your name: "
     )
@@ -285,8 +274,6 @@ def personalize():
         else:
             # find username if already exists, otherwise add to list
             # if google sheet calls fail it won't break game functionality
-            global user_cell
-            global user_data
             print(
                 f"\nWelcome to Twenty-One, {username}!\n\nChoose an option from the main menu:\n"
             )
@@ -297,9 +284,10 @@ def personalize():
                 else:
                     user_data.append_row([username, 0, 0])
                     user_cell = user_data.find(username)
+
+                return username, user_cell
             except:
-                return
-            break
+                return None, None
 
 
 # Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python
@@ -310,11 +298,10 @@ def main():
     Setting the terminal text color to white before calling other methods.
     """
     sys.stdout.write("\033[0;97m")
-    global user_data
     user_data = worksheet()
     messages.notification(messages.WELCOME_MESSAGE)
-    personalize()
-    main_menu()
+    username, user_cell = personalize(user_data)
+    main_menu(user_data, username, user_cell)
 
 
 if __name__ == "__main__":
