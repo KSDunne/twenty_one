@@ -254,26 +254,18 @@ def show_scoreboard():
     Function to show the scoreboard. This is called in the main menu
     when selected by the user.
     """
-    SCOPE = [
-        "https://www.googleapis.com/auth/spreadsheets",
-        "https://www.googleapis.com/auth/drive.file",
-        "https://www.googleapis.com/auth/drive",
-    ]
-    try:
-        CREDS = Credentials.from_service_account_file("creds.json")
-        SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-        GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-        SHEET = GSPREAD_CLIENT.open("twenty_one")
-        global user_data
-        user_data = SHEET.worksheet("user_data")
+    global user_data
+    user_data = worksheet()
+    if user_data is not None:
         scoreboard_players = user_data.col_values(1)[1:11]
         scoreboard_scores = user_data.col_values(2)[1:11]
         print("TOP 10 SCORES - TWENTY-ONE\n")
         for player, score in zip(scoreboard_players, scoreboard_scores):
             print("PLAYER: {} || POINTS: {} ||".format(player, score))
         input(Fore.BLUE + "Press Enter to continue...\033[39m")
-    except:
-        return
+    else:
+        print("Google sheets data unavailable\n")
+        input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
 def personalize():
