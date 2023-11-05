@@ -13,8 +13,14 @@ __GSPREAD_CLIENT = gspread.authorize(__SCOPED_CREDS)
 __SHEET = __GSPREAD_CLIENT.open("twenty_one")
 
 
-# Credit: Code altered from code institute love sandwiches project, to get twenty_one spreadsheet
-# Credit: https://stackoverflow.com/questions/4308182/getting-the-exception-value-in-python
+"""
+Credit: Code altered from code institute love sandwiches project, to get
+twenty_one spreadsheet
+Credit: https://stackoverflow.com/questions/4308182/getting-the-
+exception-value-in-python
+"""
+
+
 def worksheet():
     try:
         return __SHEET.worksheet("user_data")
