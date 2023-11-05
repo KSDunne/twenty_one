@@ -203,8 +203,6 @@ def main_menu(user_data, username, user_cell):
                     print_rules()
                 if answer in {"l", "L"}:
                     show_scoreboard(user_data)
-                if answer in {"q", "Q"}:
-                    messages.notification(messages.GOODBYE_MESSAGE + username)
                 if answer in {"n", "N"}:
                     messages.clear()
                     twenty_one(user_data, username, user_cell)
@@ -218,7 +216,7 @@ def main_menu(user_data, username, user_cell):
                 replay = input(messages.REPLAY_MESSAGE)
         else:
             print("Not a valid input\n")
-        answer = input(messages.MAIN_MENU_MESSAGE)
+            answer = input(messages.MAIN_MENU_MESSAGE)
     messages.notification(messages.GOODBYE_MESSAGE + username)
 
 
