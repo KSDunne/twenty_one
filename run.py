@@ -199,16 +199,6 @@ def main_menu(user_data, username, user_cell):
             messages.clear()
             twenty_one(user_data, username, user_cell)
             replay = input(messages.REPLAY_MESSAGE)
-            if replay in {"n", "N"}:
-                answer = input(messages.MAIN_MENU_MESSAGE)
-                if answer in {"r", "R"}:
-                    print_rules()
-                if answer in {"l", "L"}:
-                    show_scoreboard(user_data)
-                if answer in {"n", "N"}:
-                    messages.clear()
-                    twenty_one(user_data, username, user_cell)
-                    replay = input(messages.REPLAY_MESSAGE)
             while replay not in {"y", "Y", "n", "N"}:
                 print("Not a valid input\n")
                 replay = input(messages.REPLAY_MESSAGE)
@@ -216,6 +206,10 @@ def main_menu(user_data, username, user_cell):
                 messages.clear()
                 twenty_one(user_data, username, user_cell)
                 replay = input(messages.REPLAY_MESSAGE)
+                while replay not in {"y", "Y", "n", "N"}:
+                    print("Not a valid input\n")
+                    replay = input(messages.REPLAY_MESSAGE)
+            answer = input(messages.MAIN_MENU_MESSAGE)
         else:
             print("Not a valid input\n")
             answer = input(messages.MAIN_MENU_MESSAGE)
