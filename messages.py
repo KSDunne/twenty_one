@@ -11,7 +11,7 @@ HOUSE_BUST_MESSAGE = "House bust, you win "
 REPLAY_MESSAGE = "Play another game? (Y)es or (N)o\nUser input: "
 GOODBYE_MESSAGE = "Goodbye, "
 MAIN_MENU_MESSAGE = "(R)ules\n(N)ew game\n(L)eaderboard\n(Q)uit\n\n\
-    User input: "
+User input: "
 
 
 # Credit: https://github.com/kpsdev1/blackjack/blob/main/run.py
