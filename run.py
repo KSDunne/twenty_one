@@ -87,7 +87,6 @@ def increment_wins(user_data, user_cell):
             user_cell.col + 1,
             int(user_data.cell(user_cell.row, user_cell.col + 1).value) + 1,
         )
-        user_data.sort((user_cell.col + 1, "des"))
 
 
 def increment_losses(user_data, user_cell):
@@ -194,6 +193,7 @@ def main_menu(user_data, username, user_cell):
             answer = input(messages.MAIN_MENU_MESSAGE)
         elif answer in {"l", "L"}:
             show_scoreboard(user_data)
+            user_cell = user_data.find(username)
             answer = input(messages.MAIN_MENU_MESSAGE)
         elif answer in {"n", "N"}:
             messages.clear()
@@ -223,6 +223,7 @@ def show_scoreboard(user_data):
     when selected by the user.
     """
     if user_data is not None:
+        user_data.sort((2, "des"))
         scoreboard_players = user_data.col_values(1)[1:11]
         scoreboard_scores = user_data.col_values(2)[1:11]
         print("TOP 10 SCORES - TWENTY-ONE\n")
