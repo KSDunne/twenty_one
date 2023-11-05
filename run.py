@@ -247,18 +247,21 @@ def personalize(user_data):
     for personalization.
     """
     username = input(
-        "Your name will be stored for game personalization, so use an alias.\n\nEnter your name: "
+        "Your name will be stored for game personalization, so use an alias"
+        + ".\n\nEnter your name: "
     )
     while True:
         if not any(char.isalpha() for char in username):
             username = input(
-                "Input doesn't seem to look like a name, please enter your name again: "
+                "Input doesn't seem to look like a name, please"
+                + "enter your name again: "
             )
         else:
             # find username if already exists, otherwise add to list
             # if google sheet calls fail it won't break game functionality
             print(
-                f"\nWelcome to Twenty-One, {username}!\n\nChoose an option from the main menu:\n"
+                f"\nWelcome to Twenty-One, {username}!"
+                + "\n\nChoose an option from the main menu:\n"
             )
             if user_data is not None:
                 cell = user_data.find(username)
@@ -273,8 +276,13 @@ def personalize(user_data):
                 return "", None
 
 
-# Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python
-# Credit: https://github.com/pwaller/pyfiglet/blob/main/pyfiglet/__init__.py#L53
+"""
+Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-
+output-to-the-terminal-in-python
+Credit: https://github.com/pwaller/pyfiglet/blob/main/pyfiglet/__init__.py#L53
+"""
+
+
 def main():
     """
     Main function that calls all functions in order.
