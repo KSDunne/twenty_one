@@ -43,7 +43,8 @@ def deal_cards(deck, player):
 def total(hand):
     """
     This function computes the numerical total of a hand. It is used at
-    multiple different times to calculate the total for the player and the dealer.
+    multiple different times to calculate the total for
+    the player and the dealer.
     """
 
     values = {
@@ -103,8 +104,8 @@ def increment_losses(user_data, user_cell):
 
 def compare_hands(house, player, user_data, username, user_cell):
     """
-    This is a comparison function that looks at the numerical value of the players hand and the dealers hand
-    and determines a winner.
+    This is a comparison function that looks at the numerical value of the
+    players hand and the dealers hand and determines a winner.
     """
     house_total, player_total = total(house), total(player)
 
@@ -126,8 +127,8 @@ def compare_hands(house, player, user_data, username, user_cell):
 
 def twenty_one(user_data, username, user_cell):
     """
-    The twenty one function simulates a game of blackjack. Here is where all of the core game functions
-    are called appropriately.
+    The twenty one function simulates a game of blackjack. Here is where all of
+    the core game functions are called appropriately.
     """
     deck = shuffle_cards()
     house = []
@@ -182,8 +183,9 @@ def twenty_one(user_data, username, user_cell):
 
 def main_menu(user_data, username, user_cell):
     """
-    Here is the main menu function. It shows the user a list of options to navigate the game.
-    The options shown are: (R)ules, (N)ew game, (L)eaderboard, and (Q)uit.
+    Here is the main menu function. It shows the user a list of options to
+    navigate the game. The options shown are: (R)ules, (N)ew game,
+    (L)eaderboard, and (Q)uit.
     """
     answer = input(messages.MAIN_MENU_MESSAGE)
     while answer not in {"q", "Q"}:
@@ -240,8 +242,9 @@ def show_scoreboard(user_data):
 
 def personalize(user_data):
     """
-    Here is a function that takes the user name as an input. It can then be used in the
-    win message, lose message, bust message and goodbye messages for personalization.
+    Here is a function that takes the user name as an input. It can then be
+    used in the win message, lose message, bust message and goodbye messages
+    for personalization.
     """
     username = input(
         "Your name will be stored for game personalization, so use an alias.\n\nEnter your name: "
