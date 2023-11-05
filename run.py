@@ -191,8 +191,10 @@ def main_menu(user_data, username, user_cell):
     while answer not in {"q", "Q"}:
         if answer in {"r", "R"}:
             print_rules()
+            answer = input(messages.MAIN_MENU_MESSAGE)
         elif answer in {"l", "L"}:
             show_scoreboard(user_data)
+            answer = input(messages.MAIN_MENU_MESSAGE)
         elif answer in {"n", "N"}:
             messages.clear()
             twenty_one(user_data, username, user_cell)
@@ -232,10 +234,9 @@ def show_scoreboard(user_data):
         print("TOP 10 SCORES - TWENTY-ONE\n")
         for player, score in zip(scoreboard_players, scoreboard_scores):
             print("PLAYER: {} || POINTS: {} ||".format(player, score))
-        input(Fore.BLUE + "Press Enter to continue...\033[39m")
+        print("\n")
     else:
         print("Google sheets data unavailable\n")
-        input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
 def personalize(user_data):
