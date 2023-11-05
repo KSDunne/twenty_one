@@ -99,9 +99,13 @@ House bust you win screenshot below
 
 Below is a screenshot of the personalized goodbye screen
 
+![Goodbye screen image](docs/goodbye_ss.PNG)
+
 ### Restart game
 
 Below is a screenshot of the option to restart the game. It is a yes or no question
+
+![Replay screenshot](docs/replay_ss.PNG)
 
 ### User personalisation
 
