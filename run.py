@@ -122,7 +122,7 @@ def compare_hands(house, player, user_data, username, user_cell):
         messages.notification(messages.WIN_MESSAGE + username)
         increment_wins(user_data, user_cell)
     else:
-        messages.notification(messages.TIE_MESSAGE + username)
+        messages.notification(messages.TIE_MESSAGE)
 
 
 def twenty_one(user_data, username, user_cell):
