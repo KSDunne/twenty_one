@@ -1,5 +1,6 @@
 import messages
 import random
+import signal
 import sys
 from colorama import Fore  # color styling
 from spreadsheets import worksheet
@@ -270,6 +271,16 @@ def personalize(user_data):
                 return "", None
 
 
+def handler(signum, frame):
+    """
+    This is a function to catch when a user enters Ctrl+c during gameplay
+    and to exit gracefully
+    Credit: https://code-maven.com/catch-control-c-in-python
+    """
+    print("Ctrl-c was pressed. Exiting gracefully...")
+    exit(0)
+
+
 """
 Credit: https://stackoverflow.com/questions/37340049/how-do-i-print-colored-
 output-to-the-terminal-in-python
@@ -282,6 +293,7 @@ def main():
     Main function that calls all functions in order.
     Setting the terminal text color to white before calling other methods.
     """
+    signal.signal(signal.SIGINT, handler)
     sys.stdout.write("\033[0;97m")
     user_data = worksheet()
     messages.notification(messages.WELCOME_MESSAGE)
