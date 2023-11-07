@@ -143,17 +143,29 @@ This second screenshot shows a graceful exit when the user presses Ctrl+c when t
 
 ## Future features
 
-### Betting System
+### Betting system
+
+When researching for this project I noticed that some other students managed to add a betting system to their black jack game. This is a fun feature and if time allowed I would have added it also.
 
 ### Split hand
 
-An option to split your hands if you are dealt two of the same cards, this would make the logic of the game more complex
+An option to split your hands if you are dealt two of the same cards, this would make the logic of the game more complex. This would also make the game more realistic as this is an option when playing in a real life casino.
 
 ### Data analysis
 
-Interaction with an API for example, google sheets.
+Wins and losses could be analysed and when the house / business is losing too much an extra set of cards can be added to the shuffle. This is a real life way that a casino business can make their game more difficult for the player.
 
 ### Hide one of dealers cards
+
+Hiding one of the dealers cards is again a feature which would make the game more like the traditional real life game of black jack.
+
+### A running total
+
+A running total of the numerical value that the house and the player have, which is displayed beside the 'dealt cards' would add a lot to the UX. This is a feature that would have been added if time allowed. However, the mvp is still fun to play without this feature. There was also the challenge of what to display if the ace was dealt, because it is the player's decision how they would like to treat the ace. That is whether they want to play it as a 1 or 11.
+
+### A defensive question included in the graceful exit
+
+The following question could be added to the graceful exit 'Ctrl-c was pressed. Do you really want to exit? y/n'. Then only stop the app if the user replys yes they are sure they want to exit.
 
 ## Design
 
