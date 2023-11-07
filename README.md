@@ -221,6 +221,24 @@ There is create, read and update data functionality built into this game. Error 
 
 #### PEP8 validation
 
+PEP 8 is a style guide for Python code.
+
+The result was all clear, no errors found, when I put the 'run' file code through the CI Python Linter. 
+
+![PEP8 validation](docs/run_file_linter_result.PNG)
+
+The result was all clear, no errors found, when I put the 'messages' file code through the CI Python Linter. 
+
+![PEP8 validation](docs/messages_file_linter_result.PNG)
+
+The result was all clear, no errors found, when I put the 'rules' file code through the CI Python Linter. 
+
+![PEP8 validation](docs/rules_file_linter_result.PNG)
+
+The result was all clear, no errors found, when I put the 'spreadsheets' file code through the CI Python Linter. 
+
+![PEP8 validation](docs/spreadsheets_file_linter_result.PNG)
+
 #### HTML validation
 
 #### CSS validation
