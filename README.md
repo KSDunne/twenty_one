@@ -183,7 +183,7 @@ A core game flow chart was designed to help with writing the game functionality.
 
 There is create, read and update data functionality built into this game. Error handling for the google sheets api is also build in to the run file so that the game is still playable even if the call to google sheets fails.
 
-![Data Model Flowchart](docs/design/data_model_twenty_one.png)
+![Data Flowchart](docs/design/data_flow_twenty_one.png)
 
 ## Technology
 
@@ -270,6 +270,16 @@ It can be seen in the screenshot below that if a number was added during game pl
 The reason for this bug was that when the input validation catches the first invalid input it broke out of the while loop so another while loop needed to be added at the end of this code block. See the fix for this in the screenshot below.
 
 ![Gameplay input validation bug fix](docs/input_validation_bug_fix.PNG)
+
+#### Graceful exit
+
+It was noticed during manual testing that if the user pressed Ctrl+c during game play an error was displayed to the user. This is not good UX. So I decided to add a graceful exit for when Ctrl+C was pressed at any time when the app was running. Please see screenshot below for how the error looked before the graceful exit was added.
+
+![Screenshot of error on termination](docs/displayed_termination_error.png)
+
+This was fixed by importing the signal module and adding the handler function to run.py. Then calling that as the first function in the main function.
+
+![Graceful exit screenshot](docs/graceful_exit1.PNG)
 
 #### Capital H bug
 
