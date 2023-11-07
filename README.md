@@ -251,13 +251,13 @@ User Story
 
 ### Fixed bugs
 
-See a screenshot of the 'input validation rules bug' below. I wrote if where there should have been an elif and this broke the conditional logic
+See a screenshot of the 'input validation rules bug' below. The line 'Not a valid input' is displaying at the bottom of the rules and it shouldn't be there. The problem was that I wrote 'if' in the main menu function, where there should have been an 'elif' and this broke the conditional logic of the whole function. It especially broke the logic for after r or R was selected for rules. This is why 'Not a valid input' displayed as it was the next line of code that was read.
 
 ![Rules bug](docs/bug_rules.PNG)
 
 See screenshot below the fix for this was simply changing 'if' answer in {"l", "L"}:, to 'elif' answer in {"l", "L"}:.
 
-![Rules bug](docs/bug_rules_fix.PNG)
+![Rules bug fix](docs/bug_rules_fix.PNG)
 
 ### Unfixed bugs
 
