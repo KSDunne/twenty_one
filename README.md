@@ -169,7 +169,13 @@ The following question could be added to the graceful exit 'Ctrl-c was pressed. 
 
 ## Design
 
-### Centered mock terminal
+### Design Choices
+
+Since I built a card game, I was inspired by the nightlife and casino scene. So, I decided to go for a neon color and I found that pink on black had high accessibilty. I originally tried green on black, but the contrast wasn't as high as I would have liked. Therefore, I settled on bight pink and black with white text. I was always keeping high contrast and accessibility in mind. The pink on black colors have a fun and energised feel, which I wanted to convey since it is a simple game that should encourage fun feelings.
+
+#### Centered mock terminal
+
+I didn't do too much with the styling in this project, because I didn't want to take away from the fact that this is a python based project. The only alterations I made to the style was that; I centered the mock terminal and I hid the vertical scroll bar.
 
 ### Flow Charts
 
@@ -223,19 +229,19 @@ There is create, read and update data functionality built into this game. Error 
 
 PEP 8 is a style guide for Python code.
 
-The result was all clear, no errors found, when I put the 'run' file code through the CI Python Linter. 
+The result was all clear, no errors found, when I put the 'run' file code through the CI Python Linter.
 
 ![PEP8 validation](docs/run_file_linter_result.PNG)
 
-The result was all clear, no errors found, when I put the 'messages' file code through the CI Python Linter. 
+The result was all clear, no errors found, when I put the 'messages' file code through the CI Python Linter.
 
 ![PEP8 validation](docs/messages_file_linter_result.PNG)
 
-The result was all clear, no errors found, when I put the 'rules' file code through the CI Python Linter. 
+The result was all clear, no errors found, when I put the 'rules' file code through the CI Python Linter.
 
 ![PEP8 validation](docs/rules_file_linter_result.PNG)
 
-The result was all clear, no errors found, when I put the 'spreadsheets' file code through the CI Python Linter. 
+The result was all clear, no errors found, when I put the 'spreadsheets' file code through the CI Python Linter.
 
 ![PEP8 validation](docs/spreadsheets_file_linter_result.PNG)
 
