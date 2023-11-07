@@ -2,7 +2,6 @@ import messages
 import random
 import signal
 import sys
-from colorama import Fore  # color styling
 from spreadsheets import worksheet
 from rules import print_rules
 
