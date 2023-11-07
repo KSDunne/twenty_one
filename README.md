@@ -263,9 +263,19 @@ See screenshot below the fix for this was simply changing 'if' answer in {"l", "
 
 #### Capital H bug
 
-While manual testing the app, I noticed that capital H would not deal cards and after a while I noticed that I was allowing the word 'hit' instead of a capital H in a while loop. This was fixed by simply changing the word hit to an uppercase H.
+During manual testing of the app, I noticed that capital H would not deal cards and after a while I noticed that I was allowing the word 'hit' instead of a capital H in a while loop. This was fixed by simply changing the word hit to an uppercase H.
 
 ![Capital H bug](docs/capital_h_bug.PNG)
+
+#### Input validation game play bug
+
+It can be seen in the screenshot below that if a number was added during game play it was caught, and 'Not a valid input' was displayed. However, if a number was entered a second time it was not caught and the game kept playing.
+
+![Gameplay input validation bug](docs/input_validation_bug.PNG)
+
+The reason for this bug was that when the input validation catches the first invalid input it broke out of the while loop so another while loop needed to be added at the end of this code block. See the fix for this in the screenshot below.
+
+![Gameplay input validation bug fix](docs/input_validation_bug_fix.PNG)
 
 ### Unfixed bugs
 
