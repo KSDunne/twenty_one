@@ -173,7 +173,11 @@ The following question could be added to the graceful exit 'Ctrl-c was pressed. 
 
 Since I built a card game, I was inspired by the nightlife and casino scene. So, I decided to go for a neon color and I found that pink on black had high accessibilty. I originally tried green on black, but the contrast wasn't as high as I would have liked. Therefore, I settled on bight pink and black with white text. I was always keeping high contrast and accessibility in mind. The pink on black colors have a fun and energised feel, which I wanted to convey since it is a simple game that should encourage fun feelings.
 
-#### Centered mock terminal
+### Typography
+
+For the typography the arial font family with ligatures turned off, is used in the code institute mock terminal template. This design was maintained.
+
+### Centered mock terminal
 
 I didn't do too much with the styling in this project, because I didn't want to take away from the fact that this is a python based project. The only alterations I made to the style was that; I centered the mock terminal and I hid the vertical scroll bar.
 
@@ -205,21 +209,28 @@ There is create, read and update data functionality built into this game. Error 
 - [Visual Studio Code IDE](https://code.visualstudio.com/)
 - [Lucid Chart](https://www.lucidchart.com/pages/)
 - [Prettier Code Formatter](https://prettier.io/)
-- [Venngage's Accessible color palette generator](https://venngage.com/tools/accessible-color-palette-generator)
-- Code institute's tempate for the mock terminal was used, but it was styled by centering it and giving it a pink and black theme
+- Code institute's tempate for the mock terminal was used, but it was styled by centering it, hiding the scroll bar and giving it a pink and black theme
 
-### Notes on modules
+### Python libraries
 
-- random was imported for shuffling the deck
-- signal was imported for the graceful exit
-- sys was imported for setting the terminal text color
-- gspread was imported and this is a library of code which is used to access and update data in the spreadsheet
-- credentials was imported from google.oauth2.service_account and this uses the creds.json file to set up the authentication needed to access the google cloud project
-- pyfiglet was imported to render ascii art
-- system and name were imported from os in order to clear the terminal output right before a new game starts
-- spreadsheets is a file.py that I added to this project and the worksheet function is used in run.py
-- rules is a file.py that I added to this project, the print_rules function is imported and used in run.py
-- messages is a file.py that I added to this project, and it contains notification constants, the notification function and the clear function
+- [random](https://docs.python.org/3/library/random.html) was imported for shuffling the deck
+- [signal](https://docs.python.org/3/library/signal.html) was imported for the graceful exit
+- [sys](https://docs.python.org/3/library/sys.html) was imported for setting the terminal text color
+- [os](https://docs.python.org/3/library/os.html) was used to import system function in order to clear the terminal output right before a new game starts
+
+### Imported python modules
+
+- [gspread](https://docs.gspread.org/en/v5.11.3/) was imported and this is a library of code which is used to access and update data in the spreadsheet
+- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/reference/google.oauth2.service_account.html) was used to authorize the connection with the Google Sheets API. The leaderboard data was stored here.
+- [pyfiglet](https://pypi.org/project/pyfiglet/) was imported to render ascii art
+
+### Multiple python files
+
+There are 4 python files in total, with run.py being the main python file. The other 3 files are imported and their functions called in run.py
+
+- 'spreadsheets' is a file.py that I added to this project and the worksheet function is used in run.py
+- 'rules' is a file.py that I added to this project, the print_rules function is imported and used in run.py
+- 'messages' is a file.py that I added to this project, and it contains notification constants, the notification function and the clear function
 
 ## Testing
 
