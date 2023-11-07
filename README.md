@@ -83,11 +83,11 @@ The rules function prints 5 basic rules of the game to the screen. The game pres
 
 ### Win screen
 
-You win screenshot below
+In the screenshot below the player chose to stand on 20 and the house had to stand on 17 therefore, the player won and a notification saying 'you win (player name)' was shown
 
-![You win screen image](docs/house_bust_you_win_ss.PNG)
+![You win screen image](docs/you_win_ss.PNG)
 
-House bust you win screenshot below
+In the screenshot below the house got a large number card and went over 21. The house bust. A notification then appears displaying 'house bust, you win (player name)'.
 
 ![House bust you win screen image](docs/house_bust_you_win_ss.PNG)
 
