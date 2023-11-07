@@ -251,8 +251,8 @@ def personalize(user_data):
                 + "enter your name again: "
             )
         else:
-            # find username if already exists, otherwise add to list
-            # if google sheet calls fail it won't break game functionality
+            # Find username if already exists, otherwise add to list
+            # If google sheet calls fail it won't break game functionality
             print(
                 f"\nWelcome to Twenty-One, {username}!"
                 + "\n\nChoose an option from the main menu:\n"
