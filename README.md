@@ -71,7 +71,7 @@ After the user enters their name. It is used in string formatting to welcome the
 
 ### Input validation
 
-User input validation is used is all parts of the game where a user must input something to continue the game. For example, see below - if the user enters special characers into the main menu input option, they will be told it is not a valid input.
+User input validation is used is all parts of the game where a user must input something to continue the game. For example, see below - if the user enters special characters into the main menu input option, they will be told it is not a valid input.
 
 ![Main menu input validation image](docs/main_menu_input_validation.PNG)
 
@@ -83,7 +83,7 @@ The rules function prints 5 basic rules of the game to the screen. The game pres
 
 ### Win screen
 
-In the screenshot below the player chose to stand on 20 and the house had to stand on 17 therefore, the player won and a notification saying 'you win (player name)' was shown
+In the screenshot below the player chose to stand on 20 and the house had to stand on 17 therefore, the player won and a notification saying 'you win, (player name)' was shown.
 
 ![You win screen image](docs/you_win_ss.PNG)
 
@@ -93,31 +93,45 @@ In the screenshot below the house got a large number card and went over 21. The 
 
 ### Lose screen
 
+In the screenshot below the player chose to stand on 18 and then the house got 19 and won, so a you lose screen appeared. This screen displays 'you lose, (player name)'.
+
 ![Lose screen image](docs/you_lose_ss.PNG)
 
 ### Goodbye screen
 
-Below is a screenshot of the personalized goodbye screen
+The personalised goodbye notification appears when the player choses q or Q, from the main menu.
 
 ![Goodbye screen image](docs/goodbye_ss.PNG)
 
 ### Restart game
 
-Below is a screenshot of the option to restart the game. It is a yes or no question
+Below is a screenshot of the option to restart the game. It is a yes or no question.
 
 ![Replay screenshot](docs/replay_ss.PNG)
 
 ### User personalisation
 
-Below is a screenshot of an example of where user personalization is used in the game
+Below are 2 screenshot of an examples of where user personalization is used in the game. It is used more often than this, these are just examples. The first one shows that when the user enters a name, the name entered is used in a welcome message.
 
-### Clear screen for a new game and for restart game
+![Welcome to twenty one image](docs/welcome_to_twentyone.PNG)
 
-Below is a screenshot of how the screen clears at certain times to make the user experience less confusing and fun to use.
+All game notification and the goodbye message is personalised, please see the example below.
 
-### Show leaderboard when the appropriate option is picked from a main menu
+![Goodbye screen image](docs/user_personalization_goodbye.PNG)
+
+### Clear terminal output for a new game or restart game
+
+Below is a screenshot of how the screen clears at certain times to make the user experience less confusing and fun to use. In the screenshot below all terminal output was cleared right after the user clicked n or N for new game in the main menu. It also clears when the user presses y or Y for the 'play another game?' question.
+
+![Clear screen new game](docs/clear_terminal_output.PNG)
+
+### Leaderboard
+
+When l or L is chosen from the main menu. A leaderboard with the top 10 scores is displayed. It is sorted from highest to lowest score. A user can quit the game and come back another time and their wins will still increment appropriately if they have used the exact same name for the game.
 
 ![Leaderboard screenshot](docs/leaderboard_screenshot.PNG)
+
+### Graceful exit
 
 ## Future features
 
