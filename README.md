@@ -133,6 +133,14 @@ When l or L is chosen from the main menu. A leaderboard with the top 10 scores i
 
 ### Graceful exit
 
+It was noticed during manual texting that if you click Ctrl+c mid game, an error was shown on the screen and it is not very nice for UX. Therefore a graceful exit feature was added to the application where if at any stage that the app is open Ctrl+c is press, a message appears telling the user that they have pressed Ctrl+c and the game is now exiting. Pressing q from the main menu is another was to exit the game. That one will then display 'goodbye, (player name)' The first sceen shot shown below shows a greceful exit mid game.
+
+![Graceful exit 1 screenshot](docs/graceful_exit1.PNG)
+
+This second screenshot shows a graceful exit when the user presses Ctrl+c when the main menu is displayed.
+
+![Graceful exit 2 screenshot](docs/graceful_exit2.PNG)
+
 ## Future features
 
 ### Betting System
