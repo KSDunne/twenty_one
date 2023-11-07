@@ -202,18 +202,18 @@ There is create, read and update data functionality built into this game. Error 
 - [Venngage's Accessible color palette generator](https://venngage.com/tools/accessible-color-palette-generator)
 - Code institute's tempate for the mock terminal was used, but it was styled by centering it and giving it a pink and black theme
 
-### Python modules
+### Notes on python modules
 
 - random was imported for shuffling the deck
 - signal was imported for the graceful exit
 - sys was imported for setting the terminal text color
-- import gspread
-- from google.oauth2.service_account import Credentials
-- import pyfiglet
-- from os import system, name
-- from spreadsheets import worksheet
-- from rules import print_rules
-- import messages
+- gspread was imported and this is a library of code which is used to access and update data in the spreadsheet
+- credentials was imported from google.oauth2.service_account and this uses the creds.json file to set up the authentication needed to access the google cloud project
+- pyfiglet was imported to render ascii art
+- system and name were imported from os in order to clear the terminal output right before a new game starts
+- spreadsheets is a file.py that I added to this project and the worksheet function is used in run.py
+- rules is a file.py that I added to this project, the print_rules function is imported and used in run.py
+- messages is a file.py that I added to this project, and it contains notification constants, the notification function and the clear function
 
 ## Testing
 
