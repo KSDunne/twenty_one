@@ -193,12 +193,27 @@ There is create, read and update data functionality built into this game. Error 
 
 ### Frameworks & Tools
 
-- [Lucid Chart](https://www.lucidchart.com/pages/)
+- [Heroku](https://www.heroku.com/)
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
 - [Visual Studio Code IDE](https://code.visualstudio.com/)
+- [Lucid Chart](https://www.lucidchart.com/pages/)
 - [Prettier Code Formatter](https://prettier.io/)
 - [Venngage's Accessible color palette generator](https://venngage.com/tools/accessible-color-palette-generator)
+- Code institute's tempate for the mock terminal was used, but it was styled by centering it and giving it a pink and black theme
+
+### Python modules
+
+- random was imported for shuffling the deck
+- signal was imported for the graceful exit
+- sys was imported for setting the terminal text color
+- import gspread
+- from google.oauth2.service_account import Credentials
+- import pyfiglet
+- from os import system, name
+- from spreadsheets import worksheet
+- from rules import print_rules
+- import messages
 
 ## Testing
 
