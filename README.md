@@ -251,13 +251,21 @@ User Story
 
 ### Fixed bugs
 
-See a screenshot of the 'input validation rules bug' below. The line 'Not a valid input' is displaying at the bottom of the rules and it shouldn't be there. The problem was that I wrote 'if' in the main menu function, where there should have been an 'elif' and this broke the conditional logic of the whole function. It especially broke the logic for after r or R was selected for rules. This is why 'Not a valid input' displayed as it was the next line of code that was read.
+#### Input validation rules bug
+
+See a screenshot of the 'input validation rules bug' below. The line 'Not a valid input' is displaying at the bottom of the rules and it shouldn't be there. The problem was that I wrote 'if' in the main menu function, where there should have been an 'elif' and this broke the conditional logic of the whole function. It especially broke the logic for after r or R was selected for rules. This is why 'Not a valid input' displayed, as it was the next line of code that was read.
 
 ![Rules bug](docs/bug_rules.PNG)
 
 See screenshot below the fix for this was simply changing 'if' answer in {"l", "L"}:, to 'elif' answer in {"l", "L"}:.
 
 ![Rules bug fix](docs/bug_rules_fix.PNG)
+
+#### Capital H bug
+
+While manual testing the app, I noticed that capital H would not deal cards and after a while I noticed that I was allowing the word 'hit' instead of a capital H in a while loop. This was fixed by simply changing the word hit to an uppercase H.
+
+![Capital H bug](docs/capital_h_bug.PNG)
 
 ### Unfixed bugs
 
