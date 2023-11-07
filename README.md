@@ -202,7 +202,7 @@ There is create, read and update data functionality built into this game. Error 
 - [Venngage's Accessible color palette generator](https://venngage.com/tools/accessible-color-palette-generator)
 - Code institute's tempate for the mock terminal was used, but it was styled by centering it and giving it a pink and black theme
 
-### Notes on python modules
+### Notes on modules
 
 - random was imported for shuffling the deck
 - signal was imported for the graceful exit
@@ -251,9 +251,13 @@ User Story
 
 ### Fixed bugs
 
-See the input validation rules bug below
+See a screenshot of the 'input validation rules bug' below. I wrote if where there should have been an elif and this broke the conditional logic
 
 ![Rules bug](docs/bug_rules.PNG)
+
+See screenshot below the fix for this was simply changing 'if' answer in {"l", "L"}:, to 'elif' answer in {"l", "L"}:.
+
+![Rules bug](docs/bug_rules_fix.PNG)
 
 ### Unfixed bugs
 
