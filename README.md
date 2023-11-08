@@ -282,7 +282,17 @@ Accessibility was at 94 brought it up to 100
 
 ### User story testing
 
-User Story
+| User Story                                                                                                     | Testing                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| I want to play a game                                                                                          | The opening screen has the word game on it. Also Twenty One is a well known alternative name to Black Jack so it is intuitive that this is a game |
+| I want to see the game title when I arrive on the start screen                                                 | This need has been met                                                                                                                            |
+| I want to see a start screen where next steps are intuitive                                                    | This need has been met, the player is asked to enter a name                                                                                       |
+| I want to be able to enter a username to make the game feel personal to me                                     | This need has been met                                                                                                                            |
+| If I enter data that doesn't make sense to a particular step in the game I want to be informed                 | This need has been met, the phrase not a valid input has been implimented in all places where user input is required                              |
+| I want the abilty to navigate around the game with a main menu                                                 | This need has been met                                                                                                                            |
+| I want to be able to find the rules of the game easily                                                         | This need has been met, the rules can be accessed from the main menu or mid game play                                                             |
+| I want to be able to restart the game easily once I have finished playing a game                               | This need has been met, there is a question asking if the user wants to play another game after gameplay ends                                     |
+| I want the ability to see a leaderboard with the stored number of wins, if I choose to see it from a main menu | This need has been met                                                                                                                            |
 
 ### Fixed bugs
 
