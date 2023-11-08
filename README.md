@@ -77,7 +77,7 @@ User input validation is used is all parts of the game where a user must input s
 
 ### Rules
 
-The rules function prints 5 basic rules of the game to the screen. The game presented here is a simple version of blackjack and so it was renamed to twenty-one.
+The rules function prints 5 basic rules of the game to the screen. The game presented here is a simple version of black jack and so it was renamed to twenty-one.
 
 ![Screenshot of rules](docs/rules_screenshot.PNG)
 
@@ -461,21 +461,19 @@ Note, the difference between clone and fork is: you need permissions to push bac
 
 [White color in terminal](https://github.com/pwaller/pyfiglet/blob/main/pyfiglet/__init__.py#L53) - It can be seen where the number 97 came from at this link
 
-[W3Schools How To Create A Modal Using CSS](https://www.w3schools.com/howto/howto_css_modals.asp) - Code (HTML, CSS and JavaScript) was adapted from this source for the rules modal and the reset modal
-
 [The argument attributes of exceptions](https://stackoverflow.com/questions/4308182/getting-the-exception-value-in-python) - I learned how to get the 'exception as e' from this link
 
-[CI Student Black Jack 1](https://github.com/kpsdev1/blackjack/blob/main/run.py) - The notification function which uses pyfiglet was adapted from code in this CI student's project
+[CI student black jack 1](https://github.com/kpsdev1/blackjack/blob/main/run.py) - The notification function which uses pyfiglet was adapted from code in this CI student's project
 
-[CI Student Black Jack 2](https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28) - The function for clearing the terminal was adapted from code in this CI student's project
+[CI student black jack 2](https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28) - The function for clearing the terminal was adapted from code in this CI student's project
 
 [Love Sandwiches Code Institute Walk Through](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/blob/master/01-getting-set-up/02-connecting-oto-our-api-with-python/run.py) - Code altered from code institute love sandwiches project, to get twenty_one spreadsheet
 
 ### Inspiration for black jack game from other CI students
 
-[CI Student Black Jack Game 1](https://python-blackjack.herokuapp.com/)
+[CI student black jack game 1](https://python-blackjack.herokuapp.com/)
 
-[CI Student Black Jack Game 2](https://blackjack-10.herokuapp.com/)
+[CI student black jack game 2](https://blackjack-10.herokuapp.com/)
 
 ### Black jack rules
 
