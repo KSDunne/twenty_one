@@ -494,11 +494,11 @@ Note, the difference between clone and fork is: you need permissions to push bac
 
 [Core game functionality](https://www.youtube.com/watch?v=SHz5cUeljZw) - The core black jack game functionality was built by following the tutorial at this link. Additions worth noting: I furthered the project by adding notifications using ascii art that come from an additional messages file. I am interacting with google sheets to save scores for a leaderboard. I added a main menu. Rules can be accessed during gameplay and there was a graceful exit added to the app
 
-[Function to show scoreboard](https://github.com/adrianskelton/project3/blob/main/run.py#L138) - Function to show scoreboard was adapted from code in this project
+[Function to show scoreboard](https://github.com/adrianskelton/project3/blob/main/run.py#L138) - Function to show scoreboard was adapted from code in the project linked here
 
 [Graceful exit](https://code-maven.com/catch-control-c-in-python) - The code for the graceful exit was adapted from this tutorial
 
-[Colored output to the terminal in python](https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python) - The output was originally going to be green but this wasn't good for accessibility so the output was changed to white using the number 97
+[Colored output to the terminal in python](https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python) - The output was originally going to be green but this wasn't good for accessibility, so the output was changed to white using the number 97
 
 [White color in terminal](https://github.com/pwaller/pyfiglet/blob/main/pyfiglet/__init__.py#L53) - It can be seen where the number 97 came from at this link
 
@@ -508,7 +508,7 @@ Note, the difference between clone and fork is: you need permissions to push bac
 
 [CI student black jack 2](https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28) - The function for clearing the terminal was adapted from code in this CI student's project
 
-[Love sandwiches code institute walk through](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/blob/master/01-getting-set-up/02-connecting-oto-our-api-with-python/run.py) - Code altered from code institute love sandwiches project, to get twenty one spreadsheet
+[Love sandwiches code institute walk through](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/blob/master/01-getting-set-up/02-connecting-oto-our-api-with-python/run.py) - Code was adapted from the code institute love sandwiches project, to get the twenty one spreadsheet
 
 ### Inspiration for black jack game from other CI students
 
