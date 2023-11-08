@@ -492,7 +492,7 @@ Note, the difference between clone and fork is: you need permissions to push bac
 
 ### Code
 
-[Core game functionality](https://www.youtube.com/watch?v=SHz5cUeljZw) - The core black jack game functionality was built by following the tutorial at this link
+[Core game functionality](https://www.youtube.com/watch?v=SHz5cUeljZw) - The core black jack game functionality was built by following the tutorial at this link. Additions worth noting: I furthered the project by adding notifications using ascii art that come from an additional messages file. I am interacting with google sheets to save scores for a leaderboard. I added a main menu. Rules can be accessed during gameplay and there was a graceful exit added to the app.
 
 [Function to show scoreboard](https://github.com/adrianskelton/project3/blob/main/run.py#L138) - Function to show scoreboard was adapted from code in this project
 
@@ -516,7 +516,7 @@ Note, the difference between clone and fork is: you need permissions to push bac
 
 [CI student black jack game 2](https://blackjack-10.herokuapp.com/)
 
-### Black jack rules
+### Black jack background information and rules
 
 [Black jack background from wikipedia](https://en.wikipedia.org/wiki/Blackjack)
 

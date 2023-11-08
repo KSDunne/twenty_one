@@ -7,6 +7,11 @@ from rules import print_rules
 
 """"
 Credit: The core game functionality was built by following a tutorial.
+Additions worth noting: I furthered the project by adding notifications
+using ascii art that come from an additional messages file. I am
+interacting with google sheets to save scores for a leaderboard. I
+added a main menu. Rules can be accessed during gameplay and there
+was a graceful exit added to the app.
 Tutorial link: https://www.youtube.com/watch?v=SHz5cUeljZw
 """
 
@@ -15,6 +20,7 @@ def shuffle_cards():
     """
     This is a function to shuffle the deck of cards. Here we use a set
     of 4 Unicode symbols for suits; spades, hearts, diamonds and clubs.
+    Credit / tutorial link: https://www.youtube.com/watch?v=SHz5cUeljZw
     """
     suits = ["\u2660", "\u2661", "\u2662", "\u2663"]
     ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
@@ -38,6 +44,7 @@ def deal_cards(deck, player):
     """
     Here is a function that deals a card to the player and removes
     that card from the deck. The list will change from length of 52 to 51.
+    Credit / tutorial link: https://www.youtube.com/watch?v=SHz5cUeljZw
     """
 
     card = deck.pop()
@@ -50,6 +57,7 @@ def total(hand):
     This function computes the numerical total of a hand. It is used at
     multiple different times to calculate the total for
     the player and the dealer.
+    Credit / tutorial link: https://www.youtube.com/watch?v=SHz5cUeljZw
     """
 
     values = {
@@ -110,6 +118,10 @@ def compare_hands(house, player, user_data, username, user_cell):
     """
     This is a comparison function that looks at the numerical value of the
     players hand and the dealers hand and determines a winner.
+    Credit / tutorial link: https://www.youtube.com/watch?v=SHz5cUeljZw
+    This function is different to the tutorial one, in that the
+    tutorial prints messages within the function, but I am calling the
+    notifications from the messages file.
     """
     house_total, player_total = total(house), total(player)
 
@@ -133,6 +145,11 @@ def twenty_one(user_data, username, user_cell):
     """
     The twenty one function simulates a game of blackjack. Here is where all of
     the core game functions are called appropriately.
+    Credit / tutorial link: https://www.youtube.com/watch?v=SHz5cUeljZw
+    This function is different to the tutorial one, in that the
+    tutorial prints messages within the function, but I am calling the
+    notifications from the messages file. I am using input validation, and
+    I am interacting with google sheets.
     """
     deck = shuffle_cards()
     house = []
