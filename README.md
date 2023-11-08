@@ -45,7 +45,7 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 
 - Create an interactive card game in a terminal using Python
 - The functionality of this game should keep the core concept of black jack. That is, playing a card game using shuffled cards, against a dealer and winning without busting over a score of 21
-- Allow the user to seemlessly restart a game without having to manually press the run program button at the top of the page and without having to refresh the page
+- Allow the user to seamlessly restart a game without having to manually press the run program button at the top of the page and without having to refresh the page
 - Allow the user to navigate the game with a main menu
 - Write player wins and losses to Google Sheets. This data could be used by a card dealer or casino business to analyse and adjust the game (e.g. adding more decks to a shuffle is one way a casino can make a card game harder if the house is losing too much)
 - Query win data to show the player a leaderboard
@@ -59,9 +59,9 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 
 - An intuitive game interface
 - An ability to personalise the game by adding a name
-- The abilty to navigate around the game with a main menu
+- The ability to navigate around the game with a main menu
 - An ability to read the rules of the game
-- The ability to restart the game seemlessly in the terminal, after you have finished playing a game
+- The ability to restart the game seamlessly in the terminal, after you have finished playing a game
 - The ability to see a leaderboard with the stored number of wins, if the user chooses to see it from a main menu
 
 ## User stories
@@ -73,7 +73,7 @@ As a site visitor,
 - I want to see a start screen where next steps are intuitive
 - I want to be able to enter a username to make the game feel personal to me
 - If I enter data that doesn't make sense to a particular step in the game I want to be informed
-- I want the abilty to navigate around the game with a main menu
+- I want the ability to navigate around the game with a main menu
 - I want to be able to find the rules of the game easily
 - I want to be able to restart the game easily once I have finished playing a game
 - I want the ability to see a leaderboard with the stored number of wins, if I choose to see it from a main menu
@@ -84,7 +84,7 @@ As a site visitor,
 
 Here the user will see ASCII art that displays 'WELCOME TO TWENTYONE'. The user will be prompted to enter their name. They are also told to use a fake name because the name they enter will be stored for game personalization. The name entered here is used to personalize the win message, the lose message and the goodbye screen. The name is also sent to Google sheets and the win or loss is updated at the appropriate time. This data can be queried via a leaderboard or analyzed by the card dealer.
 
-#### Start screen image with ascii art and promt to add a name
+#### Start screen image with ascii art and prompt to add a name
 
 ![Start screen image](docs/start_screen.PNG)
 
@@ -164,7 +164,7 @@ When l or L is chosen from the main menu. A leaderboard with the top 10 scores i
 
 ### Graceful exit
 
-It was noticed during manual texting that if you click Ctrl+c mid game, an error was shown on the screen and it is not very nice for UX. Therefore a graceful exit feature was added to the application where if at any stage that the app is open Ctrl+c is press, a message appears telling the user that they have pressed Ctrl+c and the game is now exiting. Pressing q from the main menu is another was to exit the game. That one will then display 'goodbye, (player name)' The first sceen shot shown below shows a greceful exit mid game.
+It was noticed during manual texting that if you click Ctrl+c mid game, an error was shown on the screen and it is not very nice for UX. Therefore a graceful exit feature was added to the application where if at any stage that the app is open Ctrl+c is press, a message appears telling the user that they have pressed Ctrl+c and the game is now exiting. Pressing q from the main menu is another was to exit the game. That one will then display 'goodbye, (player name)' The first screenshot shown below shows a graceful exit mid game.
 
 ![Graceful exit 1 screenshot](docs/graceful_exit1.PNG)
 
@@ -196,13 +196,13 @@ A running total of the numerical value that the house and the player have, which
 
 ### A defensive question included in the graceful exit
 
-The following question could be added to the graceful exit 'Ctrl-c was pressed. Do you really want to exit? y/n'. Then only stop the app if the user replys yes they are sure they want to exit.
+The following question could be added to the graceful exit 'Ctrl-c was pressed. Do you really want to exit? y/n'. Then only stop the app if the user replies yes they are sure they want to exit.
 
 ## Design
 
 ### Design Choices
 
-Since I built a card game, I was inspired by the nightlife and casino scene. So, I decided to go for a neon color and I found that pink on black had high accessibilty. I originally tried green on black, but the contrast wasn't as high as I would have liked. Therefore, I settled on bight pink and black with white text. I was always keeping high contrast and accessibility in mind. The pink on black colors have a fun and energised feel, which I wanted to convey since it is a simple game that should encourage fun feelings.
+Since I built a card game, I was inspired by the nightlife and casino scene. So, I decided to go for a neon color and I found that pink on black had high accessibility. I originally tried green on black, but the contrast wasn't as high as I would have liked. Therefore, I settled on bright pink and black with white text. I was always keeping high contrast and accessibility in mind. The pink on black colors have a fun and energised feel, which I wanted to convey since it is a simple game that should encourage fun feelings.
 
 ### Typography
 
@@ -335,8 +335,8 @@ Using a pink on black color theme brought the accessibility score up to 100. Acc
 | 2   | I want to see the game title when I arrive on the start screen                                                 | This need has been met                                                                                                                            |
 | 3   | I want to see a start screen where next steps are intuitive                                                    | This need has been met, the player is asked to enter a name                                                                                       |
 | 4   | I want to be able to enter a username to make the game feel personal to me                                     | This need has been met                                                                                                                            |
-| 5   | If I enter data that doesn't make sense to a particular step in the game I want to be informed                 | This need has been met, the phrase 'not a valid input' has been implimented in all places where user input is required                            |
-| 6   | I want the abilty to navigate around the game with a main menu                                                 | This need has been met                                                                                                                            |
+| 5   | If I enter data that doesn't make sense to a particular step in the game I want to be informed                 | This need has been met, the phrase 'not a valid input' has been implemented in all places where user input is required                            |
+| 6   | I want the ability to navigate around the game with a main menu                                                | This need has been met                                                                                                                            |
 | 7   | I want to be able to find the rules of the game easily                                                         | This need has been met, the rules can be accessed from the main menu or mid game play                                                             |
 | 8   | I want to be able to restart the game easily once I have finished playing a game                               | This need has been met, there is a question asking if the user wants to play another game after gameplay ends                                     |
 | 9   | I want the ability to see a leaderboard with the stored number of wins, if I choose to see it from a main menu | This need has been met                                                                                                                            |
@@ -368,7 +368,7 @@ Using a pink on black color theme brought the accessibility score up to 100. Acc
 
 ##### User story 6
 
-- I want the abilty to navigate around the game with a main menu
+- I want the ability to navigate around the game with a main menu
 
 <details><summary>Screenshot</summary>
     <img src="docs/user_stories_6.PNG" alt="Main menu">
