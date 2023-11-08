@@ -258,7 +258,9 @@ The result was all clear, no errors found, when I put the 'spreadsheets' file co
 
 ### Accessibility and Lighthouse
 
-Accessibility was at 94 brought it up to 100
+Using a pink on black color theme brought the accessibility score up to 100. Accessibility was previously at 94 when using the green on black color theme.
+
+![Lighthouse score](docs/lighthouse_score.PNG)
 
 ### Manual testing
 
@@ -271,8 +273,6 @@ Accessibility was at 94 brought it up to 100
 | browser compatibility | chrome | edge | firefox | safari | opera |
 | --------------------- | ------ | ---- | ------- | ------ | ----- |
 | intended appearance   | pass   | pass | pass    | pass   | pass  |
-
-### Feature testing table
 
 ### User story testing
 
