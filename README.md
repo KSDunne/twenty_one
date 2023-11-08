@@ -19,6 +19,7 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 - [Features](#features)
 - [Future features](#future-features)
 - [Design](#design)
+- [Flow charts](#flow-charts)
 - [Technology](#technology)
 - [Testing](#testing)
   - [Code validation](#code-validation)
@@ -212,15 +213,15 @@ For the typography the arial font family with ligatures turned off, is used in t
 
 I didn't do too much with the styling in this project, because I didn't want to take away from the fact that this is a python based project. The only alterations I made to the style was that; I centered the mock terminal, I hid the vertical scroll bar and I gave it a bright pink and black theme.
 
-### Flow Charts
+## Flow charts
 
-#### Core game flowchart
+### Core game flowchart
 
 A core game flow chart was designed to help with writing the game functionality. See below.
 
 ![Core Game Flowchart](docs/design/core_game_flow.png)
 
-#### Data flowchart
+### Data flowchart
 
 There is create, read and update data functionality built into this game. Error handling for the google sheets api is also build in to the spreadsheets file so that the game is still playable even if the call to google sheets fails.
 
