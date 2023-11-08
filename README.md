@@ -396,11 +396,7 @@ During manual testing of the app, I noticed that capital H would not deal cards 
 
 No unfixed bugs
 
-### Supported screens and browsers
-
-#### Screens
-
-#### Browsers
+### Supported browsers
 
 - Chrome
 - Edge
@@ -452,6 +448,46 @@ The live link for this project can be found here - [Twenty One](https://twenty-o
 - Press enter to create your clone locally
 
 Note, the difference between clone and fork is: you need permissions to push back to the original from a clone, but not a fork because a fork will be completely your own new project.
+
+## Credits
+
+### Code
+
+[Function to show scoreboard](https://github.com/adrianskelton/project3/blob/main/run.py#L138) - Function to show scoreboard was adapted from code in this project
+
+[Graceful exit](https://code-maven.com/catch-control-c-in-python) - The code for the graceful exit was adapted from this tutorial
+
+[Colored output to the terminal in python](https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python) - The output was originally going to be green but this wasn't good for accessibility so the output was changed to white using the number 97
+
+[White color in terminal](https://github.com/pwaller/pyfiglet/blob/main/pyfiglet/__init__.py#L53) - It can be seen where the number 97 came from at this link
+
+[W3Schools How To Create A Modal Using CSS](https://www.w3schools.com/howto/howto_css_modals.asp) - Code (HTML, CSS and JavaScript) was adapted from this source for the rules modal and the reset modal
+
+[The argument attributes of exceptions](https://stackoverflow.com/questions/4308182/getting-the-exception-value-in-python) - I learned how to get the 'exception as e' from this link
+
+[CI Student Black Jack 1](https://github.com/kpsdev1/blackjack/blob/main/run.py) - The notification function which uses pyfiglet was adapted from code in this CI student's project
+
+[CI Student Black Jack 2](https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28) - The function for clearing the terminal was adapted from code in this CI student's project
+
+[Love Sandwiches Code Institute Walk Through](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/blob/master/01-getting-set-up/02-connecting-oto-our-api-with-python/run.py) - Code altered from code institute love sandwiches project, to get twenty_one spreadsheet
+
+### Inspiration for black jack game from other CI students
+
+[CI Student Black Jack Game 1](https://python-blackjack.herokuapp.com/)
+
+[CI Student Black Jack Game 2](https://blackjack-10.herokuapp.com/)
+
+### Black jack rules
+
+[Black jack background from wikipedia](https://en.wikipedia.org/wiki/Blackjack)
+
+[Black jack rules 1](https://bicyclecards.com/how-to-play/blackjack)
+
+[Black jack rules 2](https://www.blackjackapprenticeship.com/blackjack-strategy-charts/)
+
+[Black jack rules 3](https://www.wikihow.com/Play-Blackjack)
+
+[Black jack rules 4](https://casinoalpha.com/player-guides/blackjack-rules/)
 
 ## Acknowledgements
 
