@@ -209,12 +209,12 @@ There is create, read and update data functionality built into this game. Error 
 - [Visual Studio Code IDE](https://code.visualstudio.com/)
 - [Lucid Chart](https://www.lucidchart.com/pages/)
 - [Prettier Code Formatter](https://prettier.io/)
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+- [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
 - [Perplexity AI](https://www.perplexity.ai/) Note: AI was used for rule text content, not code. It was also only used for inspiration, the output was not copied directly into the porject without being altered for my own need.
 - Code institute's template for the mock terminal was used, but it was styled by centering it, hiding the scroll bar and giving it a pink and black theme
 
-The query used for Perplexity AI was as follows: "Write the 8 most important rules of blackjack card game using bulletpoints".
-
-Five rules were taken from the output and altered to suit this game of twenty one.
+The query used for Perplexity AI was as follows: "Write the 8 most important rules of blackjack card game using bulletpoints". Five rules were taken from the output and altered to suit this game of twenty one.
 
 ### Python libraries
 
