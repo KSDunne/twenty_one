@@ -492,7 +492,7 @@ Note, the difference between clone and fork is: you need permissions to push bac
 
 ### Code
 
-[Core game functionality](https://www.youtube.com/watch?v=SHz5cUeljZw) - The core black jack game functionality was built by following a tutorial
+[Core game functionality](https://www.youtube.com/watch?v=SHz5cUeljZw) - The core black jack game functionality was built by following the tutorial at this link
 
 [Function to show scoreboard](https://github.com/adrianskelton/project3/blob/main/run.py#L138) - Function to show scoreboard was adapted from code in this project
 
