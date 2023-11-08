@@ -256,10 +256,6 @@ The result was all clear, no errors found, when I put the 'spreadsheets' file co
 
 ![PEP8 validation](docs/spreadsheets_file_linter_result.PNG)
 
-#### HTML validation
-
-#### CSS validation
-
 ### Accessibility and Lighthouse
 
 Accessibility was at 94 brought it up to 100
@@ -276,8 +272,6 @@ Accessibility was at 94 brought it up to 100
 | --------------------- | ------ | ---- | ------- | ------ | ----- |
 | intended appearance   | pass   | pass | pass    | pass   | pass  |
 
-#### Testing links on the site
-
 ### Feature testing table
 
 ### User story testing
@@ -293,6 +287,42 @@ Accessibility was at 94 brought it up to 100
 | 7   | I want to be able to find the rules of the game easily                                                         | This need has been met, the rules can be accessed from the main menu or mid game play                                                             |
 | 8   | I want to be able to restart the game easily once I have finished playing a game                               | This need has been met, there is a question asking if the user wants to play another game after gameplay ends                                     |
 | 9   | I want the ability to see a leaderboard with the stored number of wins, if I choose to see it from a main menu | This need has been met                                                                                                                            |
+
+- User story 1
+
+I want to play a game
+
+- User story 2
+
+I want to see the game title when I arrive on the start screen
+
+- User story 3
+
+I want to see a start screen where next steps are intuitive
+
+- User story 4
+
+I want to be able to enter a username to make the game feel personal to me
+
+- User story 5
+
+If I enter data that doesn't make sense to a particular step in the game I want to be informed
+
+- User story 6
+
+I want the abilty to navigate around the game with a main menu
+
+- User story 7
+
+I want to be able to find the rules of the game easily
+
+- User story 8
+
+I want to be able to restart the game easily once I have finished playing a game
+
+- User story 9
+
+I want the ability to see a leaderboard with the stored number of wins, if I choose to see it from a main menu
 
 ### Fixed bugs
 
