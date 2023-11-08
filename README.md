@@ -209,7 +209,10 @@ There is create, read and update data functionality built into this game. Error 
 - [Visual Studio Code IDE](https://code.visualstudio.com/)
 - [Lucid Chart](https://www.lucidchart.com/pages/)
 - [Prettier Code Formatter](https://prettier.io/)
-- Code institute's tempate for the mock terminal was used, but it was styled by centering it, hiding the scroll bar and giving it a pink and black theme
+- [Perplexity AI](https://www.perplexity.ai/) Note: AI was used for rule text content, not code. It was also only used for inspiration, the output was not copied directly into the porject without being altered for my own need.
+- Code institute's template for the mock terminal was used, but it was styled by centering it, hiding the scroll bar and giving it a pink and black theme
+
+The query used for Perplexity AI was as follows: "Write the 8 most important rules of blackjack card game using bulletpoints". Five were taken from the output and altered to suit this game of twenty one.
 
 ### Python libraries
 
@@ -467,7 +470,7 @@ Note, the difference between clone and fork is: you need permissions to push bac
 
 [CI student black jack 2](https://github.com/luizsmania/blackjack/blob/main/run.py#L49C1-L59C28) - The function for clearing the terminal was adapted from code in this CI student's project
 
-[Love Sandwiches Code Institute Walk Through](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/blob/master/01-getting-set-up/02-connecting-oto-our-api-with-python/run.py) - Code altered from code institute love sandwiches project, to get twenty_one spreadsheet
+[Love sandwiches code institute walk through](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/blob/master/01-getting-set-up/02-connecting-oto-our-api-with-python/run.py) - Code altered from code institute love sandwiches project, to get twenty one spreadsheet
 
 ### Inspiration for black jack game from other CI students
 
