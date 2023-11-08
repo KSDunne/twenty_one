@@ -48,7 +48,7 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 - The functionality of this game should keep the core concept of black jack. That is, playing a card game using shuffled cards, against a dealer and winning without busting over a score of 21
 - Allow the user to seamlessly restart a game without having to manually press the run program button at the top of the page and without having to refresh the page
 - Allow the user to navigate the game with a main menu
-- Write player wins and losses to Google Sheets. This data could be used by a card dealer or casino business to analyse and adjust the game (e.g. adding more decks to a shuffle is one way a casino can make a card game harder if the house is losing too much)
+- Write player wins and losses to Google Sheets. This data could be used by a card dealer or casino business to analyze and adjust the game (e.g. adding more decks to a shuffle is one way a casino can make a card game harder if the house is losing too much)
 - Query win data to show the player a leaderboard
 
 ### Target audience
@@ -59,7 +59,7 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 ### User requirements and expectations
 
 - An intuitive game interface
-- An ability to personalise the game by adding a name
+- An ability to personalize the game by adding a name
 - The ability to navigate around the game with a main menu
 - An ability to read the rules of the game
 - The ability to restart the game seamlessly in the terminal, after you have finished playing a game
@@ -83,7 +83,7 @@ As a site visitor,
 
 ### Start screen
 
-Here the user will see ASCII art that displays 'WELCOME TO TWENTYONE'. The user will be prompted to enter their name. They are also told to use a fake name because the name they enter will be stored for game personalization. The name entered here is used to personalize the win message, the lose message and the goodbye screen. The name is also sent to Google sheets and the win or loss is updated at the appropriate time. This data can be queried via a leaderboard or analyzed by the card dealer.
+Here the user will see ASCII art that displays 'WELCOME TO TWENTYONE'. The user will be prompted to enter their name. They are also told to use a fake name, because the name they enter will be stored for game personalization. The name entered here is used to personalize the win message, the lose message and the goodbye screen. The name is also sent to Google sheets and the win or loss is updated at the appropriate time. This data can be queried via a leaderboard or analyzed by the card dealer.
 
 #### Start screen image with ascii art and prompt to add a name
 
@@ -131,7 +131,7 @@ When there is a tie, a notification is shown to the user and there is no change 
 
 ### Goodbye screen
 
-The personalised goodbye notification appears when the player choses q or Q, from the main menu.
+The personalized goodbye notification appears when the player choses q or Q, from the main menu.
 
 ![Goodbye screen image](docs/goodbye_ss.PNG)
 
@@ -141,13 +141,13 @@ Below is a screenshot of the option to restart the game. It is a yes or no quest
 
 ![Replay screenshot](docs/replay_ss.PNG)
 
-### User personalisation
+### User personalization
 
 Below are 2 screenshot of an examples of where user personalization is used in the game. It is used more often than this, these are just examples. The first one shows that when the user enters a name, the name entered is used in a welcome message.
 
 ![Welcome to twenty one image](docs/welcome_to_twentyone.PNG)
 
-All game notification and the goodbye message is personalised, please see the example below.
+All game notification and the goodbye message is personalized, please see the example below.
 
 ![Goodbye screen image](docs/user_personalization_goodbye.PNG)
 
@@ -177,15 +177,15 @@ This second screenshot shows a graceful exit when the user presses Ctrl+c when t
 
 ### Betting system
 
-When researching for this project I noticed that some other students managed to add a betting system to their black jack game. This is a fun feature and if time allowed I would have added it also.
+When researching for this project, I noticed that some other students added a betting system to their black jack game. This was done using a set amount of chips that were given to the player at the start of the game. This is a fun feature and if time allowed I would have added it also.
 
 ### Split hand
 
-An option to split your hands if you are dealt two of the same cards, this would make the logic of the game more complex. This would also make the game more realistic as this is an option when playing in a real life casino.
+An option to split your hand if you are dealt two of the same cards, this would make the logic of the game more complex. This would also make the game more realistic, as this is an option when playing in a real life casino.
 
 ### Data analysis
 
-Wins and losses could be analysed and when the house / business is losing too much an extra set of cards can be added to the shuffle. This is a real life way that a casino business can make their game more difficult for the player.
+Wins and losses could be analyzed and when the house / business is losing too much an extra set of cards can be added to the shuffle. This is a real life way that a casino business can make their game more difficult for the player.
 
 ### Hide one of dealers cards
 
@@ -492,7 +492,7 @@ Note, the difference between clone and fork is: you need permissions to push bac
 
 ### Code
 
-[Core game functionality](https://www.youtube.com/watch?v=SHz5cUeljZw) - The core black jack game functionality was built by following the tutorial at this link. Additions worth noting: I furthered the project by adding notifications using ascii art that come from an additional messages file. I am interacting with google sheets to save scores for a leaderboard. I added a main menu. Rules can be accessed during gameplay and there was a graceful exit added to the app.
+[Core game functionality](https://www.youtube.com/watch?v=SHz5cUeljZw) - The core black jack game functionality was built by following the tutorial at this link. Additions worth noting: I furthered the project by adding notifications using ascii art that come from an additional messages file. I am interacting with google sheets to save scores for a leaderboard. I added a main menu. Rules can be accessed during gameplay and there was a graceful exit added to the app
 
 [Function to show scoreboard](https://github.com/adrianskelton/project3/blob/main/run.py#L138) - Function to show scoreboard was adapted from code in this project
 
