@@ -5,6 +5,11 @@ import sys
 from spreadsheets import worksheet
 from rules import print_rules
 
+""""
+Credit: The core game functionality was built by following a tutorial.
+Tutorial link: https://www.youtube.com/watch?v=SHz5cUeljZw
+"""
+
 
 def shuffle_cards():
     """
