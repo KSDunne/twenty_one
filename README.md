@@ -218,7 +218,7 @@ There is create, read and update data functionality built into this game. Error 
 - [sys](https://docs.python.org/3/library/sys.html) was imported for setting the terminal text color
 - [os](https://docs.python.org/3/library/os.html) was used to import system function in order to clear the terminal output right before a new game starts
 
-### Imported python modules
+### Third party python modules that were imported and used
 
 - [gspread](https://docs.gspread.org/en/v5.11.3/) was imported and this is a library of code which is used to access and update data in the spreadsheet
 - [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/reference/google.oauth2.service_account.html) was used to authorize the connection with the Google Sheets API. The leaderboard data was stored here.
@@ -382,3 +382,7 @@ The live link for this project can be found here - [Twenty One](https://twenty-o
 - Press enter to create your clone locally
 
 Note, the difference between clone and fork is: you need permissions to push back to the original from a clone, but not a fork because a fork will be completely your own new project.
+
+## Acknowledgements
+
+Thank you to family and friends for the continued support and inspiration. Thank you to my CI mentor and to the leader of our CI cohort :sparkles:
