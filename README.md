@@ -48,12 +48,14 @@ Here are the rules of this game, Twenty One:
 - RULE 1: Have a hand that totals higher than the dealer's, but is not > 21
 
 - RULE 2: Number cards are worth face value, colored cards (i.e. J, Q, K) are 10 and an ace can be 1 or 11
+
 - RULE 3: Hit means you take another card, stand means you keep your current hand
+
 - RULE 4: If player has > 21, they bust and lose. If the dealer has > 21, they also bust and the player wins
 
 - RULE 5: The dealer must hit if they are < 17, unless the player decided to stand and the dealer already has > the player. The dealer wins in this instance
 
-The game here is the basic version of black jack. It is good for beginners to learn the core game. This is why it was renamed to Twenty-One. Enjoy!
+The game here is the basic version of black jack. It is good for beginners to learn the core game. This is why it was renamed to Twenty One. Enjoy!
 
 ## User experience (UX)
 
@@ -106,7 +108,7 @@ Here the user will see ASCII art that displays 'WELCOME TO TWENTYONE'. The user 
 
 ### Main menu options
 
-After the user enters their name. It is used in string formatting to welcome them to the game of Twenty-One. Then the user is asked to choose an option from the main menu. Here, the user is given the option to press r or R for rules, n or N for a new game, l or L to view the leaderboard and q or Q to quit. Every other character, number or special character shows the user a message saying, not a valid input.
+After the user enters their name. It is used in string formatting to welcome them to the game of Twenty One. Then the user is asked to choose an option from the main menu. Here, the user is given the option to press r or R for rules, n or N for a new game, l or L to view the leaderboard and q or Q to quit. Every other character, number or special character shows the user a message saying, not a valid input.
 
 ![Main menu image](docs/main_menu.PNG)
 
@@ -118,7 +120,7 @@ User input validation is used is all parts of the game where a user must input s
 
 ### Rules
 
-The rules function prints 5 basic rules of the game to the screen. The game presented here is a simple version of black jack and so it was renamed to twenty-one.
+The rules function prints 5 basic rules of the game to the screen. The game presented here is a simple version of black jack and so it was renamed to twenty one.
 
 ![Screenshot of rules](docs/rules_screenshot.PNG)
 
