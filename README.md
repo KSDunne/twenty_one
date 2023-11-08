@@ -97,6 +97,12 @@ In the screenshot below the player chose to stand on 18 and then the house got 1
 
 ![Lose screen image](docs/you_lose_ss.PNG)
 
+### Tie screen
+
+When there is a tie, a notification is shown to the user and there is no change to the scores in google sheets. See screenshot below for an example of the tie notification.
+
+![Tie screen image](docs/tie_ss.PNG)
+
 ### Goodbye screen
 
 The personalised goodbye notification appears when the player choses q or Q, from the main menu.
@@ -191,7 +197,7 @@ A core game flow chart was designed to help with writing the game functionality.
 
 #### Data flowchart
 
-There is create, read and update data functionality built into this game. Error handling for the google sheets api is also build in to the run file so that the game is still playable even if the call to google sheets fails.
+There is create, read and update data functionality built into this game. Error handling for the google sheets api is also build in to the spreadsheets file so that the game is still playable even if the call to google sheets fails.
 
 ![Data Flowchart](docs/design/data_flow_twenty_one.png)
 
