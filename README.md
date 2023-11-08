@@ -14,6 +14,31 @@ Twenty One is a Python terminal game. The game of Twenty One is well known. It i
 
 ## Table of contents
 
+- [User experience (UX)](#user-experience-ux)
+- [User stories](#user-stories)
+- [Features](#features)
+- [Future features](#future-features)
+- [Design](#design)
+- [Technology](#technology)
+- [Testing](#testing)
+  - [Code validation](#code-validation)
+  - [Accessibility and Lighthouse](#accessibility-and-lighthouse)
+  - [Manual testing](#manual-testing)
+    - [Browser compatibility testing](#browser-compatibility-testing)
+  - [Supported browsers](#supported-browsers)
+  - [User story testing](#user-story-testing)
+    - [User story testing table](#user-story-testing-table)
+    - [User story testing screenshots](#user-story-testing-screenshots)
+  - [Fixed bugs](#fixed-bugs)
+    - [Input validation rules bug](#input-validation-rules-bug)
+    - [Input validation game play bug](#input-validation-game-play-bug)
+    - [Graceful exit](#graceful-exit-1)
+    - [Capital H bug](#capital-h-bug)
+  - [Unfixed bugs](#unfixed-bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+
 ## User experience (UX)
 
 ### Key project goals
@@ -292,6 +317,14 @@ Using a pink on black color theme brought the accessibility score up to 100. Acc
 | intended appearance   | pass   | pass | pass    | pass   | pass  |
 | functionality         | pass   | pass | pass    | pass   | pass  |
 
+### Supported browsers
+
+- Chrome
+- Edge
+- Firefox
+- Safari
+- Opera
+
 ### User story testing
 
 #### User story testing table
@@ -408,14 +441,6 @@ During manual testing of the app, I noticed that capital H would not deal cards 
 ### Unfixed bugs
 
 No unfixed bugs
-
-### Supported browsers
-
-- Chrome
-- Edge
-- Firefox
-- Safari
-- Opera
 
 ## Deployment
 
