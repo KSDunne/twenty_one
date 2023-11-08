@@ -266,13 +266,18 @@ Using a pink on black color theme brought the accessibility score up to 100. Acc
 
 #### Browser compatibility testing
 
-- All pages were tested on the following browsers, Chrome, Edge, Firefox, Safari and Opera
+- The app was tested on the following browsers, Chrome, Firefox, Edge, Safari and Opera
+
+- The app was tested for 'intended appearance' and for 'intended functionality' on all 5 browsers
+
+- From what I can see the app works exactly the same on all 5 browsers
 
 - See browser compatibility testing results in the table below
 
 | browser compatibility | chrome | edge | firefox | safari | opera |
 | --------------------- | ------ | ---- | ------- | ------ | ----- |
 | intended appearance   | pass   | pass | pass    | pass   | pass  |
+| functionality         | pass   | pass | pass    | pass   | pass  |
 
 ### User story testing
 
