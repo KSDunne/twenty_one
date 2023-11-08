@@ -303,7 +303,7 @@ Accessibility was at 94 brought it up to 100
 - I want to be able to enter a username to make the game feel personal to me
 
 <details><summary>Screenshot</summary>
-    <img src="docs/user_story_tests/user_stories_1_to_4.PNG" alt="Start screen">
+    <img src="docs/user_stories_1_to_4.PNG" alt="Start screen">
 </details>
 
 ##### User story 5
@@ -311,8 +311,8 @@ Accessibility was at 94 brought it up to 100
 - If I enter data that doesn't make sense to a particular step in the game I want to be informed
 
 <details><summary>Screenshots</summary>
-    <img src="docs/user_story_tests/user_stories_5_part_1.PNG" alt="Input validation when special characters are entered">
-    <img src="docs/user_story_tests/user_stories_5_part_2.PNG" alt="Input validation when numbers are entered">
+    <img src="docs/user_stories_5_part_1.PNG" alt="Input validation when special characters are entered">
+    <img src="docs/user_stories_5_part_2.PNG" alt="Input validation when numbers are entered">
 </details>
 
 ##### User story 6
@@ -320,7 +320,7 @@ Accessibility was at 94 brought it up to 100
 - I want the abilty to navigate around the game with a main menu
 
 <details><summary>Screenshot</summary>
-    <img src="docs/user_story_tests/user_stories_6.PNG" alt="Main menu">
+    <img src="docs/user_stories_6.PNG" alt="Main menu">
 </details>
 
 ##### User story 7
@@ -328,8 +328,8 @@ Accessibility was at 94 brought it up to 100
 - I want to be able to find the rules of the game easily
 
 <details><summary>Screenshots</summary>
-    <img src="docs/user_story_tests/user_stories_7_part_1.PNG" alt="Rules in main menu">
-    <img src="docs/user_story_tests/user_stories_7_part_2.PNG" alt="Rules mid game play">
+    <img src="docs/user_stories_7_part_1.PNG" alt="Rules in main menu">
+    <img src="docs/user_stories_7_part_2.PNG" alt="Rules mid game play">
 </details>
 
 ##### User story 8
@@ -337,7 +337,7 @@ Accessibility was at 94 brought it up to 100
 - I want to be able to restart the game easily once I have finished playing a game
 
 <details><summary>Screenshot</summary>
-    <img src="docs/user_story_tests/user_stories_8.PNG" alt="Play another game screen">
+    <img src="docs/user_stories_8.PNG" alt="Play another game screen">
 </details>
 
 ##### User story 9
@@ -345,8 +345,8 @@ Accessibility was at 94 brought it up to 100
 - I want the ability to see a leaderboard with the stored number of wins, if I choose to see it from a main menu
 
 <details><summary>Screenshots</summary>
-    <img src="docs/user_story_tests/user_stories_9_part_1.PNG" alt="Access leaderboard from main menu">
-    <img src="docs/user_story_tests/user_stories_9_part_2.PNG" alt="Leaderboard screenshot">
+    <img src="docs/user_stories_9_part_1.PNG" alt="Access leaderboard from main menu">
+    <img src="docs/user_stories_9_part_2.PNG" alt="Leaderboard screenshot">
 </details>
 
 ### Fixed bugs
