@@ -179,7 +179,7 @@ For the typography the arial font family with ligatures turned off, is used in t
 
 ### Centered mock terminal
 
-I didn't do too much with the styling in this project, because I didn't want to take away from the fact that this is a python based project. The only alterations I made to the style was that; I centered the mock terminal and I hid the vertical scroll bar.
+I didn't do too much with the styling in this project, because I didn't want to take away from the fact that this is a python based project. The only alterations I made to the style was that; I centered the mock terminal, I hid the vertical scroll bar and I gave it a bright pink and black theme.
 
 ### Flow Charts
 
@@ -211,7 +211,7 @@ There is create, read and update data functionality built into this game. Error 
 - [Prettier Code Formatter](https://prettier.io/)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 - [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
-- [Perplexity AI](https://www.perplexity.ai/) Note: AI was used for rule text content, not code. It was also only used for inspiration, the output was not copied directly into the porject without being altered for my own need.
+- [Perplexity AI](https://www.perplexity.ai/) Note: AI was used for rule text content, not code. It was also only used for inspiration, the output was not copied directly into the project without being altered for my own need
 - Code institute's template for the mock terminal was used, but it was styled by centering it, hiding the scroll bar and giving it a pink and black theme
 
 The query used for Perplexity AI was as follows: "Write the 8 most important rules of blackjack card game using bulletpoints". Five rules were taken from the output and altered to suit this game of twenty one.
@@ -276,6 +276,8 @@ Using a pink on black color theme brought the accessibility score up to 100. Acc
 - The app was tested for 'intended appearance' and for 'intended functionality' on all 5 browsers
 
 - From what I can see the app works exactly the same on all 5 browsers
+
+- Note: The app was also tested on a 2012 macbook air, because I find app-faults usually show up easily on older devices, it was tested on a 2017 macbook and a 2022 microsoft windows PC
 
 - See browser compatibility testing results in the table below
 
