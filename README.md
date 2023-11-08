@@ -481,13 +481,13 @@ Note, the difference between clone and fork is: you need permissions to push bac
 
 [Black jack background from wikipedia](https://en.wikipedia.org/wiki/Blackjack)
 
-[Black jack rules 1](https://bicyclecards.com/how-to-play/blackjack)
+[Black jack rules from bicycle cards](https://bicyclecards.com/how-to-play/blackjack)
 
-[Black jack rules 2](https://www.blackjackapprenticeship.com/blackjack-strategy-charts/)
+[Black jack rules from black jack apprenticeship](https://www.blackjackapprenticeship.com/blackjack-strategy-charts/)
 
-[Black jack rules 3](https://www.wikihow.com/Play-Blackjack)
+[Black jack rules from wikihow](https://www.wikihow.com/Play-Blackjack)
 
-[Black jack rules 4](https://casinoalpha.com/player-guides/blackjack-rules/)
+[Black jack rules from casino alpha player guides](https://casinoalpha.com/player-guides/blackjack-rules/)
 
 ## Acknowledgements
 
